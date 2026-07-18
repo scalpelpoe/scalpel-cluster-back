@@ -1,0 +1,1197 @@
+{
+  "tradeStats": {
+    "addsPassives": "enchant.stat_3086156145",
+    "grants": "enchant.stat_3948993189"
+  },
+  "bases": {
+    "1": "Axe Attacks deal 12% increased Damage with Hits and Ailments\nSword Attacks deal 12% increased Damage with Hits and Ailments",
+    "2": "Staff Attacks deal 12% increased Damage with Hits and Ailments\nMace or Sceptre Attacks deal 12% increased Damage with Hits and Ailments",
+    "3": "Claw Attacks deal 12% increased Damage with Hits and Ailments\nDagger Attacks deal 12% increased Damage with Hits and Ailments",
+    "4": "12% increased Damage with Bows\n12% increased Damage Over Time with Bow Skills",
+    "5": "Wand Attacks deal 12% increased Damage with Hits and Ailments",
+    "6": "12% increased Damage with Two Handed Weapons",
+    "7": "12% increased Attack Damage while Dual Wielding",
+    "8": "12% increased Attack Damage while holding a Shield",
+    "9": "10% increased Attack Damage",
+    "10": "10% increased Spell Damage",
+    "11": "10% increased Elemental Damage",
+    "12": "12% increased Physical Damage",
+    "13": "12% increased Fire Damage",
+    "14": "12% increased Lightning Damage",
+    "15": "12% increased Cold Damage",
+    "16": "12% increased Chaos Damage",
+    "17": "Minions deal 10% increased Damage"
+  },
+  "notables": {
+    "Advance Guard": {
+      "rid": 11119,
+      "group": "AfflictionNotableAdvanceGuard",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1625939562",
+      "bases": [
+        8
+      ]
+    },
+    "Aggressive Defence": {
+      "rid": 15405,
+      "group": "AfflictionNotableAggressiveDefence",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_4154008618",
+      "bases": [
+        1,
+        2,
+        3
+      ]
+    },
+    "Ancestral Inspiration": {
+      "rid": 11164,
+      "group": "AfflictionNotableAncestralInspiration",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_77045106",
+      "bases": [
+        10
+      ]
+    },
+    "Arcane Adept": {
+      "rid": 11172,
+      "group": "AfflictionNotableArcaneAdept",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_393565679",
+      "bases": [
+        10
+      ]
+    },
+    "Arcane Heroism": {
+      "rid": 11224,
+      "group": "AfflictionNotableArcaneHeroism",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_3901992019",
+      "bases": [
+        10
+      ]
+    },
+    "Arcing Shot": {
+      "rid": 11195,
+      "group": "AfflictionNotableArcingShot",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3212859169",
+      "bases": [
+        4
+      ]
+    },
+    "Battle-Hardened": {
+      "rid": 11134,
+      "group": "AfflictionNotableBattleHardened",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_4188581520",
+      "bases": [
+        12
+      ]
+    },
+    "Battlefield Dominator": {
+      "rid": 11201,
+      "group": "AfflictionNotableBattlefieldDominator",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1499057234",
+      "bases": [
+        6
+      ]
+    },
+    "Blanketed Snow": {
+      "rid": 11243,
+      "group": "AfflictionNotableBlanketedSnow",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1085167979",
+      "bases": [
+        15
+      ]
+    },
+    "Blast-Freeze": {
+      "rid": 11286,
+      "group": "AfflictionNotableBlastFreeze",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_693808153",
+      "bases": [
+        15
+      ]
+    },
+    "Blizzard Caller": {
+      "rid": 12243,
+      "group": "AfflictionNotableBlizzardCaller",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3758712376",
+      "bases": [
+        15
+      ]
+    },
+    "Bloodscent": {
+      "rid": 11186,
+      "group": "AfflictionNotableBloodscent",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_3967765261",
+      "bases": [
+        1
+      ]
+    },
+    "Broadside": {
+      "rid": 11197,
+      "group": "AfflictionNotableBroadside",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2205982416",
+      "bases": [
+        4
+      ]
+    },
+    "Brutal Infamy": {
+      "rid": 11205,
+      "group": "AfflictionNotableBrutalInfamy",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2068574831",
+      "bases": [
+        6
+      ]
+    },
+    "Burden Projection": {
+      "rid": 11226,
+      "group": "AfflictionNotableBurdenProjection",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2008682345",
+      "bases": [
+        10
+      ]
+    },
+    "Burning Bright": {
+      "rid": 11262,
+      "group": "AfflictionNotableBurningBright",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_4199056048",
+      "bases": [
+        13
+      ]
+    },
+    "Calamitous": {
+      "rid": 11217,
+      "group": "AfflictionNotableCalamitous",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3359207393",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Call to the Slaughter": {
+      "rid": 11255,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_3317068522",
+      "bases": [
+        17
+      ]
+    },
+    "Cold to the Core": {
+      "rid": 11244,
+      "group": "AfflictionNotableColdtotheCore",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_744783843",
+      "bases": [
+        15
+      ]
+    },
+    "Cold-Blooded Killer": {
+      "rid": 11245,
+      "group": "AfflictionNotableColdBloodedKiller",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_836566759",
+      "bases": [
+        15
+      ]
+    },
+    "Combat Rhythm": {
+      "rid": 11207,
+      "group": "AfflictionNotableCombatRhythm",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3122505794",
+      "bases": [
+        7
+      ]
+    },
+    "Conjured Wall": {
+      "rid": 11223,
+      "group": "AfflictionNotableConjuredWall",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_4105031548",
+      "bases": [
+        10
+      ]
+    },
+    "Corrosive Elements": {
+      "rid": 11231,
+      "group": "AfflictionNotableCorrosiveElements",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_1777139212",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Cremator": {
+      "rid": 11238,
+      "group": "AfflictionNotableCremator",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1153801980",
+      "bases": [
+        13
+      ]
+    },
+    "Dark Ideation": {
+      "rid": 11249,
+      "group": "AfflictionNotableDarkIdeation",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1603621602",
+      "bases": [
+        16
+      ]
+    },
+    "Deadly Repartee": {
+      "rid": 11212,
+      "group": "AfflictionNotableDeadlyRepartee",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1013470938",
+      "bases": [
+        7
+      ]
+    },
+    "Deep Chill": {
+      "rid": 11285,
+      "group": "AfflictionNotableDeepChill",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1703766309",
+      "bases": [
+        15
+      ]
+    },
+    "Devastator": {
+      "rid": 11218,
+      "group": "AfflictionNotableDevastator",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_3711553948",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Disease Vector": {
+      "rid": 11194,
+      "group": "AfflictionNotableDiseaseVector",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_183591019",
+      "bases": [
+        3
+      ]
+    },
+    "Disorienting Display": {
+      "rid": 11233,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 50,
+      "suffix": true,
+      "tradeId": "explicit.stat_3206911230",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Doryani's Lesson": {
+      "rid": 11232,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 68,
+      "suffix": true,
+      "tradeId": "explicit.stat_228455793",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Drive the Destruction": {
+      "rid": 11220,
+      "group": "AfflictionNotableDrivetheDestruction",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1911162866",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Essence Rush": {
+      "rid": 11228,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 50,
+      "suffix": true,
+      "tradeId": "explicit.stat_1096136223",
+      "bases": [
+        10
+      ]
+    },
+    "Expansive Might": {
+      "rid": 11190,
+      "group": "AfflictionNotableExpansiveMight",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_394918362",
+      "bases": [
+        2
+      ]
+    },
+    "Exploit Weakness": {
+      "rid": 12246,
+      "group": "AfflictionNotableExploitWeakness",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_50129423",
+      "bases": [
+        12
+      ]
+    },
+    "Explosive Force": {
+      "rid": 11198,
+      "group": "AfflictionNotableExplosiveForce",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_2017927451",
+      "bases": [
+        5
+      ]
+    },
+    "Fan of Blades": {
+      "rid": 11193,
+      "group": "AfflictionNotableFanofBlades",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_2484082827",
+      "bases": [
+        3
+      ]
+    },
+    "Fearsome Warrior": {
+      "rid": 11206,
+      "group": "AfflictionNotableFearsomeWarrior",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_3134222965",
+      "bases": [
+        6
+      ]
+    },
+    "Feasting Fiends": {
+      "rid": 11311,
+      "group": "AfflictionNotableFeastingFiends",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_383245807",
+      "bases": [
+        17
+      ]
+    },
+    "Feed the Fury": {
+      "rid": 11221,
+      "group": "AfflictionNotableFeedtheFury",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3944525413",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Force Multiplier": {
+      "rid": 11130,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 50,
+      "suffix": true,
+      "tradeId": "explicit.stat_1904581068",
+      "bases": [
+        12
+      ]
+    },
+    "Fuel the Fight": {
+      "rid": 11219,
+      "group": "AfflictionNotableFueltheFight",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_3599340381",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Furious Assault": {
+      "rid": 11131,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_3415827027",
+      "bases": [
+        12
+      ]
+    },
+    "Gladiator's Fortitude": {
+      "rid": 11124,
+      "group": "AfflictionNotableGladiatorsFortitude",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1591995797",
+      "bases": [
+        8
+      ]
+    },
+    "Graceful Execution": {
+      "rid": 11204,
+      "group": "AfflictionNotableGracefulExecution",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1903496649",
+      "bases": [
+        6
+      ]
+    },
+    "Grim Oath": {
+      "rid": 11133,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 68,
+      "suffix": true,
+      "tradeId": "explicit.stat_2194205899",
+      "bases": [
+        12,
+        16
+      ]
+    },
+    "Heavy Hitter": {
+      "rid": 11215,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 50,
+      "suffix": true,
+      "tradeId": "explicit.stat_3640252904",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Hit and Run": {
+      "rid": 11208,
+      "group": "AfflictionNotableHitandRun",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2665170385",
+      "bases": [
+        7
+      ]
+    },
+    "Insatiable Killer": {
+      "rid": 11209,
+      "group": "AfflictionNotableInsatiableKiller",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3904970959",
+      "bases": [
+        7
+      ]
+    },
+    "Inspired Oppression": {
+      "rid": 11283,
+      "group": "AfflictionNotableInspiredOppression",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_3872380586",
+      "bases": [
+        11,
+        14,
+        15
+      ]
+    },
+    "Iron Breaker": {
+      "rid": 11127,
+      "group": "AfflictionNotableIronBreaker",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_3258653591",
+      "bases": [
+        12
+      ]
+    },
+    "Lord of Drought": {
+      "rid": 12242,
+      "group": "AfflictionNotableLordofDrought",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2055715585",
+      "bases": [
+        13
+      ]
+    },
+    "Mage Bane": {
+      "rid": 11210,
+      "group": "AfflictionNotableMageBane",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_684155617",
+      "bases": [
+        7
+      ]
+    },
+    "Mage Hunter": {
+      "rid": 11371,
+      "group": "AfflictionNotableMageHunter",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_2118664144",
+      "bases": [
+        10
+      ]
+    },
+    "Martial Mastery": {
+      "rid": 11202,
+      "group": "AfflictionNotableMartialMastery",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1015189426",
+      "bases": [
+        6
+      ]
+    },
+    "Martial Momentum": {
+      "rid": 11211,
+      "group": "AfflictionNotableMartialMomentum",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2978494217",
+      "bases": [
+        7
+      ]
+    },
+    "Martial Prowess": {
+      "rid": 11216,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_1152182658",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Master of Fire": {
+      "rid": 11236,
+      "group": "AfflictionNotableMasterofFire",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_1462135249",
+      "bases": [
+        13
+      ]
+    },
+    "Master the Fundamentals": {
+      "rid": 11129,
+      "group": "AfflictionNotableMastertheFundamentals",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3585232432",
+      "bases": [
+        12
+      ]
+    },
+    "Misery Everlasting": {
+      "rid": 12245,
+      "group": "AfflictionNotableMiseryEverlasting",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3832665876",
+      "bases": [
+        16
+      ]
+    },
+    "Opportunistic Fusilade": {
+      "rid": 11199,
+      "group": "AfflictionNotableOpportunisticFusilade",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_4281625943",
+      "bases": [
+        5
+      ]
+    },
+    "Overlord": {
+      "rid": 11189,
+      "group": "AfflictionNotableOverlord",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_2250169390",
+      "bases": [
+        2
+      ]
+    },
+    "Overshock": {
+      "rid": 11289,
+      "group": "AfflictionNotableOvershock",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3777170562",
+      "bases": [
+        14
+      ]
+    },
+    "Overwhelming Malice": {
+      "rid": 11145,
+      "group": "AfflictionNotableOverwhelmingMalice",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_770408103",
+      "bases": [
+        16
+      ]
+    },
+    "Paralysis": {
+      "rid": 11241,
+      "group": "AfflictionNotableParalysis",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_4272503233",
+      "bases": [
+        14
+      ]
+    },
+    "Practiced Caster": {
+      "rid": 11225,
+      "group": "AfflictionNotablePracticedCaster",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_3435403756",
+      "bases": [
+        10
+      ]
+    },
+    "Precise Retaliation": {
+      "rid": 11125,
+      "group": "AfflictionNotablePreciseRetaliation",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2335364359",
+      "bases": [
+        8
+      ]
+    },
+    "Primordial Bond": {
+      "rid": 11258,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 68,
+      "suffix": true,
+      "tradeId": "explicit.stat_622362787",
+      "bases": [
+        17
+      ]
+    },
+    "Prismatic Heart": {
+      "rid": 11234,
+      "group": "AfflictionNotablePrismaticHeart",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2342448236",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Prodigious Defence": {
+      "rid": 11118,
+      "group": "AfflictionNotableProdigiousDefense",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_1705633890",
+      "bases": [
+        8
+      ]
+    },
+    "Quick and Deadly": {
+      "rid": 11213,
+      "group": "AfflictionNotableQuickandDeadly",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_2169345147",
+      "bases": [
+        7
+      ]
+    },
+    "Raze and Pillage": {
+      "rid": 11253,
+      "group": "AfflictionNotableRazeandPillage",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1038897629",
+      "bases": [
+        17
+      ]
+    },
+    "Renewal": {
+      "rid": 11252,
+      "group": "AfflictionNotableRenewal",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3607300552",
+      "bases": [
+        17
+      ]
+    },
+    "Righteous Path": {
+      "rid": 11142,
+      "group": "AfflictionNotableVengefulCommander",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2620267328",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Riot Queller": {
+      "rid": 11372,
+      "group": "AfflictionNotableRiotQueller",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_254194892",
+      "bases": [
+        8
+      ]
+    },
+    "Rotten Claws": {
+      "rid": 11254,
+      "group": "AfflictionNotableRottenClaws",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2289610642",
+      "bases": [
+        17
+      ]
+    },
+    "Run Through": {
+      "rid": 11187,
+      "group": "AfflictionNotableRunThrough",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1488030420",
+      "bases": [
+        1
+      ]
+    },
+    "Sadist": {
+      "rid": 11230,
+      "group": "AfflictionNotableSadist",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_3638731729",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Sap Psyche": {
+      "rid": 11229,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 68,
+      "suffix": true,
+      "tradeId": "explicit.stat_715786975",
+      "bases": [
+        10
+      ]
+    },
+    "Scintillating Idea": {
+      "rid": 11345,
+      "group": "AfflictionNotableScintillatingIdea",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2589589781",
+      "bases": [
+        14
+      ]
+    },
+    "Seal Mender": {
+      "rid": 11222,
+      "group": "AfflictionNotableSealMender",
+      "ilvl": 75,
+      "suffix": false,
+      "tradeId": "explicit.stat_876846990",
+      "bases": [
+        10
+      ]
+    },
+    "Skeletal Atrophy": {
+      "rid": 11543,
+      "group": "AfflictionNotableSkeletalAtrophy",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1290215329",
+      "bases": [
+        17
+      ]
+    },
+    "Smite the Weak": {
+      "rid": 11214,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_540300548",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Smoking Remains": {
+      "rid": 11237,
+      "group": "AfflictionNotableSmokingRemains",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2322980282",
+      "bases": [
+        13
+      ]
+    },
+    "Snowstorm": {
+      "rid": 11239,
+      "group": "AfflictionNotableSnowstorm",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1595367309",
+      "bases": [
+        14,
+        15
+      ]
+    },
+    "Storm Drinker": {
+      "rid": 11240,
+      "group": "AfflictionNotableStormDrinker",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2087561637",
+      "bases": [
+        14
+      ]
+    },
+    "Storm's Hand": {
+      "rid": 11200,
+      "group": "AfflictionNotableStormsHand",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1122051203",
+      "bases": [
+        5
+      ]
+    },
+    "Stormrider": {
+      "rid": 11288,
+      "group": "AfflictionNotableStormrider",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_889728548",
+      "bases": [
+        14,
+        15
+      ]
+    },
+    "Strike Leader": {
+      "rid": 11121,
+      "group": "AfflictionNotableStrikeLeader",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_282062371",
+      "bases": [
+        8
+      ]
+    },
+    "Surefooted Striker": {
+      "rid": 11203,
+      "group": "AfflictionNotableSurefootedStriker",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_3410752193",
+      "bases": [
+        6
+      ]
+    },
+    "Tempered Arrowheads": {
+      "rid": 11196,
+      "group": "AfflictionNotableTemperedArrowheads",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2631806437",
+      "bases": [
+        4
+      ]
+    },
+    "Tempt the Storm": {
+      "rid": 12244,
+      "group": "AfflictionNotableTempttheStorm",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_348883745",
+      "bases": [
+        14
+      ]
+    },
+    "Thaumophage": {
+      "rid": 11227,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 50,
+      "suffix": true,
+      "tradeId": "explicit.stat_177215332",
+      "bases": [
+        10
+      ]
+    },
+    "Thunderstruck": {
+      "rid": 11287,
+      "group": "AfflictionNotableThunderstruck",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1741700339",
+      "bases": [
+        14
+      ]
+    },
+    "Titanic Swings": {
+      "rid": 11155,
+      "group": "AfflictionNotableTitanicSwings",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_2930275641",
+      "bases": [
+        6
+      ]
+    },
+    "Touch of Cruelty": {
+      "rid": 11246,
+      "group": "AfflictionNotableTouchofCruelty",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2780712583",
+      "bases": [
+        16
+      ]
+    },
+    "Unholy Grace": {
+      "rid": 11250,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_4186213466",
+      "bases": [
+        16
+      ]
+    },
+    "Unspeakable Gifts": {
+      "rid": 11248,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 75,
+      "suffix": true,
+      "tradeId": "explicit.stat_729163974",
+      "bases": [
+        16
+      ]
+    },
+    "Unwaveringly Evil": {
+      "rid": 11247,
+      "group": "AfflictionNotableUnwaveringlyEvil",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2788982914",
+      "bases": [
+        16
+      ]
+    },
+    "Veteran Defender": {
+      "rid": 11126,
+      "group": "AfflictionNotableVeteranDefender",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_664010431",
+      "bases": [
+        8
+      ]
+    },
+    "Vicious Bite": {
+      "rid": 11257,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 75,
+      "suffix": true,
+      "tradeId": "explicit.stat_882876854",
+      "bases": [
+        17
+      ]
+    },
+    "Vicious Skewering": {
+      "rid": 11132,
+      "group": "AfflictionNotableViciousSkewering",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_567971948",
+      "bases": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "Weight Advantage": {
+      "rid": 11191,
+      "group": "AfflictionNotableWeightAdvantage",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_2244243943",
+      "bases": [
+        2
+      ]
+    },
+    "Wicked Pall": {
+      "rid": 11251,
+      "group": "AfflictionNotableWickedPall",
+      "ilvl": 50,
+      "suffix": false,
+      "tradeId": "explicit.stat_1616734644",
+      "bases": [
+        16
+      ]
+    },
+    "Widespread Destruction": {
+      "rid": 11235,
+      "group": "AfflictionNotableLargeSuffix",
+      "ilvl": 1,
+      "suffix": true,
+      "tradeId": "explicit.stat_1678643716",
+      "bases": [
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    "Wind-up": {
+      "rid": 11192,
+      "group": "AfflictionNotableWindup",
+      "ilvl": 68,
+      "suffix": false,
+      "tradeId": "explicit.stat_1938661964",
+      "bases": [
+        3
+      ]
+    },
+    "Wound Aggravation": {
+      "rid": 11188,
+      "group": "AfflictionNotableWoundAggravation",
+      "ilvl": 1,
+      "suffix": false,
+      "tradeId": "explicit.stat_69078820",
+      "bases": [
+        1
+      ]
+    }
+  }
+}
