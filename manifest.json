@@ -1,0 +1,12 @@
+{
+  "manifestVersion": 1,
+  "id": "cluster-jewel",
+  "version": "1.0.0",
+  "name": "Cluster Jewel Calculator",
+  "description": "Find which notables can roll in the skippable middle position of a Large Cluster Jewel, and jump to trade searches for optimal jewels.",
+  "author": "scalpelpoe",
+  "homepage": "https://github.com/scalpelpoe/scalpel-cluster-jewel",
+  "iconUrl": "https://raw.githubusercontent.com/scalpelpoe/scalpel-cluster-jewel/main/icon.svg",
+  "scalpelMinVersion": ">=0.9.13-rc3",
+  "poeVersions": [1]
+}
