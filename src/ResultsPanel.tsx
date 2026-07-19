@@ -11,7 +11,7 @@ const FAILURE_TEXT: Record<string, string> = {
 }
 
 /** Single-pair results, strictly vertical: middles list, then stacked trade
- *  rows, then the ilvl range. */
+ *  rows. */
 export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
   pair: PairResult
   getLeague: () => string
