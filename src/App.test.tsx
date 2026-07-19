@@ -39,7 +39,7 @@ describe('App', () => {
     fireEvent.change(screen.getByPlaceholderText('Filter notables'), { target: { value: 'Feed the' } })
     fireEvent.click(screen.getByText('Feed the Fury'))
     fireEvent.click(screen.getByText('Calculate'))
-    expect(screen.getByText(/Position 2 options: Smite the Weak/)).toBeTruthy()
+    expect(screen.getByText(/Smite the Weak \(1\)/)).toBeTruthy()
   })
 
   it('shows the copied-jewel panel when a Large Cluster Jewel is copied, and keeps it on unrelated copies', () => {
@@ -82,6 +82,6 @@ describe('App', () => {
     })
     fireEvent.click(screen.getByText('Load pair into calculator'))
     fireEvent.click(screen.getByText('Calculate'))
-    expect(screen.getByText(/Position 2 options: Smite the Weak/)).toBeTruthy()
+    expect(screen.getByText(/Smite the Weak \(1\)/)).toBeTruthy()
   })
 })

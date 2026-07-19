@@ -1,16 +1,13 @@
 import { Button } from '@scalpelpoe/plugin-sdk'
 import { middlesOnBase, type PairResult } from './calculator'
-import { baseText, getNotable, type NotableInfo } from './data'
+import { baseText, getNotable } from './data'
+import { NotableLabel } from './NotableLabel'
 import { tradeUrl } from './trade-url'
 
 const FAILURE_TEXT: Record<string, string> = {
   'same-group': 'These notables share a mod group and cannot roll together.',
   'no-shared-base': 'These notables cannot roll on any of the same cluster jewel bases.',
   'no-middles': 'No notable can appear in position 2 with this pair.',
-}
-
-function middleList(middles: NotableInfo[]): string {
-  return middles.map((m) => `${m.name} (${m.ilvl})`).join(', ')
 }
 
 export function PairResultCard({ pair, getLeague, onOpenTrade }: {
@@ -33,7 +30,12 @@ export function PairResultCard({ pair, getLeague, onOpenTrade }: {
       ) : (
         <>
           <div style={{ marginBottom: 6 }}>
-            Position 2 options: {middleList(pair.middles)}
+            Position 2 options:{' '}
+            <span style={{ display: 'inline-flex', flexWrap: 'wrap', gap: 8, verticalAlign: 'middle' }}>
+              {pair.middles.map((m) => (
+                <NotableLabel key={m.name} name={m.name} detail={`(${m.ilvl})`} />
+              ))}
+            </span>
           </div>
           {basesWithMiddles.map((baseId) => (
             <div key={baseId} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>

@@ -2,6 +2,7 @@ import { RemoveButton, TextInput } from '@scalpelpoe/plugin-sdk'
 import { useState } from 'react'
 import { compatibleWith } from './calculator'
 import { allNotables } from './data'
+import { NotableLabel } from './NotableLabel'
 
 export function NotablePicker({ selected, onChange }: { selected: string[]; onChange: (selected: string[]) => void }): JSX.Element {
   const [filter, setFilter] = useState('')
@@ -16,7 +17,7 @@ export function NotablePicker({ selected, onChange }: { selected: string[]; onCh
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
           {selected.map((name) => (
             <span key={name} className="setting-box" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '2px 6px' }}>
-              {name}
+              <NotableLabel name={name} size={14} />
               <RemoveButton onClick={() => onChange(selected.filter((s) => s !== name))} />
             </span>
           ))}
@@ -31,7 +32,7 @@ export function NotablePicker({ selected, onChange }: { selected: string[]; onCh
               onClick={() => onChange([...selected, n.name])}
               style={{ background: 'none', border: 'none', color: 'var(--text)', cursor: 'pointer', padding: '2px 4px', width: '100%', textAlign: 'left' }}
             >
-              {n.name}
+              <NotableLabel name={n.name} />
             </button>
           </li>
         ))}

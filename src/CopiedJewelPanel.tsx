@@ -1,5 +1,6 @@
 import { Button } from '@scalpelpoe/plugin-sdk'
 import type { CopiedJewelAnalysis } from './clipboard'
+import { NotableLabel } from './NotableLabel'
 
 export function CopiedJewelPanel({ analysis, onLoadPair }: {
   analysis: CopiedJewelAnalysis
@@ -15,7 +16,7 @@ export function CopiedJewelPanel({ analysis, onLoadPair }: {
       <ol style={{ margin: '0 0 6px', padding: 0, listStyle: 'none' }}>
         {recognized.map((n, i) => (
           <li key={n.name}>
-            {i + 1}. {n.name} (ilvl {n.ilvl})
+            {i + 1}. <NotableLabel name={n.name} detail={`(ilvl ${n.ilvl})`} />
             {three && i === 1 ? ' - middle, skippable' : ''}
           </li>
         ))}

@@ -8,7 +8,9 @@ describe('PairResultCard', () => {
     const onOpenTrade = vi.fn()
     render(<PairResultCard pair={pair} getLeague={() => 'Mercenaries'} onOpenTrade={onOpenTrade} />)
     expect(screen.getByText(/Prodigious Defence \(ilvl 1\) \+ Feed the Fury \(ilvl 50\)/)).toBeTruthy()
-    expect(screen.getByText(/Smite the Weak \(1\), Heavy Hitter \(50\), Martial Prowess \(1\)/)).toBeTruthy()
+    expect(screen.getByText(/Smite the Weak \(1\)/)).toBeTruthy()
+    expect(screen.getByText(/Heavy Hitter \(50\)/)).toBeTruthy()
+    expect(screen.getByText(/Martial Prowess \(1\)/)).toBeTruthy()
     // 1 shared base -> exactly one trade button, no any-base row
     const buttons = screen.getAllByText('Open trade')
     expect(buttons).toHaveLength(1)

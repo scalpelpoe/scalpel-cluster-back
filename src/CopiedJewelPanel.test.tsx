@@ -19,10 +19,11 @@ describe('CopiedJewelPanel', () => {
       '1 Added Passive Skill is Prodigious Defence',
     ])
     render(<CopiedJewelPanel analysis={a} onLoadPair={() => {}} />)
-    expect(screen.getByText(/1\. Prodigious Defence/)).toBeTruthy()
-    expect(screen.getByText(/2\. Smite the Weak/)).toBeTruthy()
+    const items = screen.getAllByRole('listitem').map((li) => li.textContent ?? '')
+    expect(items[0]).toContain('1. Prodigious Defence')
+    expect(items[1]).toContain('2. Smite the Weak')
+    expect(items[2]).toContain('3. Feed the Fury')
     expect(screen.getByText(/skippable/i)).toBeTruthy()
-    expect(screen.getByText(/3\. Feed the Fury/)).toBeTruthy()
   })
 
   it('loads positions 1 and 3 into the calculator', () => {
