@@ -1,5 +1,5 @@
 import { allNotables } from './data'
-import { notableIcon } from './icons'
+import { baseSmallIcon, notableIcon } from './icons'
 import iconsJson from './data/notable-icons.json'
 
 describe('notableIcon', () => {
@@ -23,5 +23,15 @@ describe('notableIcon', () => {
       // PNG IHDR width lives at bytes 16-19.
       expect(buf.readUInt32BE(16), base).toBe(32)
     }
+  })
+
+  it('bundles a small-passive icon for every jewel base', () => {
+    const { baseSmalls, icons } = iconsJson as unknown as { baseSmalls: Record<string, string>; icons: Record<string, string> }
+    expect(Object.keys(baseSmalls)).toHaveLength(17)
+    for (const [id, base] of Object.entries(baseSmalls)) {
+      expect(icons[base], `base ${id}`).toBeDefined()
+      expect(baseSmallIcon(Number(id)), `base ${id}`).toMatch(/^data:image\/png;base64,/)
+    }
+    expect(baseSmallIcon(99)).toBeNull()
   })
 })

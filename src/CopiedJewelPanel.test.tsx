@@ -49,4 +49,10 @@ describe('CopiedJewelPanel', () => {
     render(<CopiedJewelPanel analysis={a} onLoadPair={() => {}} />)
     expect(screen.getByText(/Total Fabrication/)).toBeTruthy()
   })
+
+  it('renders the cluster wheel artwork', () => {
+    const a = analysis(['1 Added Passive Skill is Feed the Fury', '1 Added Passive Skill is Prodigious Defence'])
+    const { container } = render(<CopiedJewelPanel analysis={a} onLoadPair={() => {}} />)
+    expect(container.querySelector('svg')).toBeTruthy()
+  })
 })

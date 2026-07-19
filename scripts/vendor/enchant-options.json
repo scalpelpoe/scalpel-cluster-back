@@ -1,0 +1,19 @@
+{
+  "attack_damage_+%": 9,
+  "attack_damage_+%_while_holding_a_shield": 8,
+  "axe_hit_and_ailment_damage_+%|sword_hit_and_ailment_damage_+%": 1,
+  "bow_damage_+%|damage_over_time_+%_with_bow_skills": 4,
+  "chaos_damage_+%": 16,
+  "claw_hit_and_ailment_damage_+%|dagger_hit_and_ailment_damage_+%": 3,
+  "cold_damage_+%": 15,
+  "damage_+%_with_two_handed_weapons": 6,
+  "damage_while_dual_wielding_+%": 7,
+  "elemental_damage_+%": 11,
+  "fire_damage_+%": 13,
+  "lightning_damage_+%": 14,
+  "mace_hit_and_ailment_damage_+%|staff_hit_and_ailment_damage_+%": 2,
+  "minion_damage_+%": 17,
+  "physical_damage_+%": 12,
+  "spell_damage_+%": 10,
+  "wand_hit_and_ailment_damage_+%": 5
+}

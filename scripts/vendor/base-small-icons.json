@@ -1,0 +1,19 @@
+{
+  "1": "NodeAxeandSwordDamage",
+  "2": "NodeMaceandStaffDamage",
+  "3": "NodeDaggerandClawDamage",
+  "4": "NodeBowDamage",
+  "5": "NodeWandDamage",
+  "6": "NodeTwoHandedMeleeDamage",
+  "7": "NodeDualWieldingDamage",
+  "8": "NodeHoldingShieldDamage",
+  "9": "IncreasedAttackDamageNode",
+  "10": "IncreasedSpellDamageNode",
+  "11": "ElementalDamagenode",
+  "12": "PhysicalDamagenode2",
+  "13": "FireDamagenode",
+  "14": "LightningDamagenode",
+  "15": "ColdDamagenode",
+  "16": "ChaosDamagenode",
+  "17": "IncreasedMinionDamageNode"
+}

@@ -45,6 +45,30 @@ describe('analyzeClusterItem', () => {
 
   it('handles a jewel with no notables and no passives enchant', () => {
     const a = analyzeClusterItem(jewel({}))
-    expect(a).toEqual({ passives: null, recognized: [], unknown: [] })
+    expect(a).toEqual({ passives: null, baseId: null, recognized: [], unknown: [] })
+  })
+
+  it('detects the jewel base from a single-line grant enchant', () => {
+    const a = analyzeClusterItem(
+      jewel({ enchants: ['Adds 8 Passive Skills', 'Added Small Passive Skills grant: 12% increased Attack Damage while holding a Shield'] }),
+    )
+    expect(a?.baseId).toBe(8)
+  })
+
+  it('detects a two-line base regardless of line order', () => {
+    const a = analyzeClusterItem(
+      jewel({
+        enchants: [
+          'Added Small Passive Skills grant: Sword Attacks deal 12% increased Damage with Hits and Ailments',
+          'Added Small Passive Skills grant: Axe Attacks deal 12% increased Damage with Hits and Ailments',
+        ],
+      }),
+    )
+    expect(a?.baseId).toBe(1)
+  })
+
+  it('returns null baseId for unknown or missing grant text', () => {
+    expect(analyzeClusterItem(jewel({ enchants: ['Added Small Passive Skills grant: something new'] }))?.baseId).toBeNull()
+    expect(analyzeClusterItem(jewel({}))?.baseId).toBeNull()
   })
 })

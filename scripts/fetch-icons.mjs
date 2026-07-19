@@ -52,7 +52,8 @@ if (rawFlag !== -1) {
 }
 
 const mapping = JSON.parse(readFileSync(sourcePath, 'utf8'))
-const basenames = [...new Set(Object.values(mapping))].sort((a, b) => a.localeCompare(b))
+const baseSmalls = JSON.parse(readFileSync(resolve(root, 'scripts/vendor/base-small-icons.json'), 'utf8'))
+const basenames = [...new Set([...Object.values(mapping), ...Object.values(baseSmalls)])].sort((a, b) => a.localeCompare(b))
 console.log(`fetch-icons: ${Object.keys(mapping).length} notables, ${basenames.length} distinct icons`)
 
 function wikiUrl(base) {
@@ -100,6 +101,6 @@ for (const base of basenames) {
 rmSync(srcDir, { recursive: true, force: true })
 rmSync(dstDir, { recursive: true, force: true })
 
-const out = { byNotable: mapping, icons }
+const out = { byNotable: mapping, baseSmalls, icons }
 writeFileSync(outPath, `${JSON.stringify(out, null, 2)}\n`)
 console.log(`fetch-icons: wrote ${outPath} (${basenames.length} icons inlined)`)

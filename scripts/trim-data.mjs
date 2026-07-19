@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url'
 const root = dirname(dirname(fileURLToPath(import.meta.url)))
 const fullPath = resolve(root, 'scripts/vendor/data-full.json')
 const outPath = resolve(root, 'src/data/cluster-data.json')
+const enchantOptionsPath = resolve(root, 'scripts/vendor/enchant-options.json')
 
 const full = JSON.parse(readFileSync(fullPath, 'utf8'))
 const large = full.Notables.Large
@@ -67,6 +68,7 @@ const enchantKey = (ench) => ench.map((l) => l.Description.replace('%', `${l.Val
 const optionByKey = new Map()
 const bases = {}
 const notables = {}
+const enchantOptions = {}
 
 for (const name of Object.keys(large).sort((a, b) => a.localeCompare(b))) {
   const n = large[name]
@@ -83,6 +85,7 @@ for (const name of Object.keys(large).sort((a, b) => a.localeCompare(b))) {
       }
       optionByKey.set(key, opt)
       bases[opt.id] = opt.text
+      enchantOptions[ench.map((l) => l.Description).sort((a, b) => a.localeCompare(b)).join('|')] = opt.id
     }
     baseIds.push(optionByKey.get(key).id)
   }
@@ -105,12 +108,17 @@ const trimmed = {
   notables,
 }
 const json = `${JSON.stringify(trimmed, null, 2)}\n`
+const enchantJson = `${JSON.stringify(Object.fromEntries(Object.entries(enchantOptions).sort(([a], [b]) => a.localeCompare(b))), null, 2)}\n`
 
 if (process.argv.includes('--check')) {
   const committed = readFileSync(outPath, 'utf8')
   if (committed !== json) fail('src/data/cluster-data.json is out of sync - run: npm run trim-data')
+  const committedEnchant = readFileSync(enchantOptionsPath, 'utf8')
+  if (committedEnchant !== enchantJson) fail('scripts/vendor/enchant-options.json is out of sync - run: npm run trim-data')
   console.log(`trim-data: in sync (${Object.keys(notables).length} notables, ${Object.keys(bases).length} bases)`)
 } else {
   writeFileSync(outPath, json)
   console.log(`trim-data: wrote ${outPath} (${Object.keys(notables).length} notables, ${Object.keys(bases).length} bases)`)
+  writeFileSync(enchantOptionsPath, enchantJson)
+  console.log(`trim-data: wrote ${enchantOptionsPath} (${Object.keys(enchantOptions).length} entries)`)
 }
