@@ -1,4 +1,6 @@
 import { Button } from '@scalpelpoe/plugin-sdk'
+import { useState } from 'react'
+import { baseShortName } from './base-names'
 import { middlesOnBase, type PairResult } from './calculator'
 import { baseText } from './data'
 import { NotableLabel } from './NotableLabel'
@@ -11,43 +13,65 @@ const FAILURE_TEXT: Record<string, string> = {
   'no-middles': 'No notable can appear in position 2 with this pair.',
 }
 
-/** Single-pair results, strictly vertical: middles list, then stacked trade
- *  rows. */
+/** Two-column results: the possible back (position 2) notables on the left,
+ *  the cluster-base dropdown plus the trade action on the right. The base
+ *  choice filters the list and scopes the trade search; "Any Base" exists
+ *  only when more than one base can actually produce a middle. */
 export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
   pair: PairResult
   getLeague: () => string
   onOpenTrade: (url: string) => void
 }): JSX.Element {
-  if (!pair.ok) {
-    return (
-      <div style={{ ...PANEL_BOX, padding: 10 }}>
-        {FAILURE_TEXT[pair.reason ?? 'no-middles']}
-      </div>
-    )
-  }
   const basesWithMiddles = pair.sharedBases.filter((b) => middlesOnBase(pair.middles, b).length > 0)
+  const hasAny = basesWithMiddles.length > 1
+  const [choice, setChoice] = useState<string>(hasAny ? 'any' : String(basesWithMiddles[0] ?? ''))
+
+  if (!pair.ok) {
+    return <div style={{ ...PANEL_BOX, padding: 10 }}>{FAILURE_TEXT[pair.reason ?? 'no-middles']}</div>
+  }
+
+  const baseId = choice === 'any' ? null : Number(choice)
+  const shownMiddles = baseId === null ? pair.middles : middlesOnBase(pair.middles, baseId)
+
   return (
     <div style={{ ...PANEL_BOX, padding: 10 }}>
-      <div style={{ fontWeight: 600, marginBottom: 6 }}>Position 2 options</div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 10 }}>
-        {pair.middles.map((m) => (
-          <NotableLabel key={m.name} name={m.name} detail={`(ilvl ${m.ilvl})`} />
-        ))}
-      </div>
-      <div style={{ fontWeight: 600, marginBottom: 6 }}>Trade searches</div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        {basesWithMiddles.map((baseId) => (
-          <div key={baseId} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ flex: 1, whiteSpace: 'pre-line' }}>{baseText(baseId)}</span>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+        <div>
+          <div className="section-title">Back Notable Options</div>
+          <ul style={{ listStyle: 'none', margin: '4px 0 0', padding: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {shownMiddles.map((m) => (
+              <li key={m.name}>
+                <NotableLabel name={m.name} detail={`(ilvl ${m.ilvl})`} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className="section-title">Cluster Base</div>
+          <select
+            value={choice}
+            onChange={(e) => setChoice(e.target.value)}
+            style={{
+              width: '100%',
+              marginTop: 4,
+              padding: '4px 8px',
+              background: 'rgba(0, 0, 0, 0.3)',
+              color: 'var(--text)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              borderRadius: 4,
+            }}
+          >
+            {hasAny && <option value="any">Any Base</option>}
+            {basesWithMiddles.map((id) => (
+              <option key={id} value={String(id)} title={baseText(id)}>
+                {baseShortName(id)}
+              </option>
+            ))}
+          </select>
+          <div style={{ marginTop: 8 }}>
             <Button onClick={() => onOpenTrade(tradeUrl(getLeague(), pair, baseId))}>Open trade</Button>
           </div>
-        ))}
-        {pair.sharedBases.length > 1 && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ flex: 1 }}>Any of these bases</span>
-            <Button onClick={() => onOpenTrade(tradeUrl(getLeague(), pair, null))}>Open trade</Button>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   )

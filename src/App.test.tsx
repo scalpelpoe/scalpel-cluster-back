@@ -41,7 +41,7 @@ describe('App', () => {
     expect(screen.getByText('Desired Notable 1')).toBeTruthy()
     expect(screen.getByText('Desired Notable 3')).toBeTruthy()
     expect(screen.getByText(/will be listed here/)).toBeTruthy()
-    expect(screen.queryByText('Trade searches')).toBeNull()
+    expect(screen.queryByText('Cluster Base')).toBeNull()
   })
 
   it('auto-loads results when both notables are picked', () => {
@@ -49,7 +49,7 @@ describe('App', () => {
     render(<App ctx={ctx} />)
     pick('Desired Notable 1', 'prodig', 'Prodigious Defence')
     pick('Desired Notable 3', 'feed the', 'Feed the Fury')
-    expect(screen.getByText('Trade searches')).toBeTruthy()
+    expect(screen.getByText('Cluster Base')).toBeTruthy()
     expect(screen.getByText(/Smite the Weak \(ilvl 1\)/)).toBeTruthy()
   })
 
@@ -67,7 +67,7 @@ describe('App', () => {
     pick('Desired Notable 1', 'prodig', 'Prodigious Defence')
     pick('Desired Notable 3', 'feed the', 'Feed the Fury')
     fireEvent.click(screen.getAllByLabelText('remove')[0])
-    expect(screen.queryByText('Trade searches')).toBeNull()
+    expect(screen.queryByText('Cluster Base')).toBeNull()
   })
 
   it('loads the copied jewel front pair from the strip', () => {
@@ -88,7 +88,7 @@ describe('App', () => {
       )
     })
     fireEvent.click(screen.getByText('Load pair'))
-    expect(screen.getByText('Trade searches')).toBeTruthy()
+    expect(screen.getByText('Cluster Base')).toBeTruthy()
     expect(screen.getByText(/Smite the Weak \(ilvl 1\)/)).toBeTruthy()
   })
 

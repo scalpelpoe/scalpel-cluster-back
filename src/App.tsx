@@ -46,10 +46,10 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
   return (
     <div style={{ padding: 12, color: 'var(--text)', display: 'flex', flexDirection: 'column', gap: 12 }}>
       {pair ? (
-        <ResultsPanel pair={pair} getLeague={() => ctx.getLeague()} onOpenTrade={(url) => ctx.openExternal(url)} />
+        <ResultsPanel key={`${pair.name1}|${pair.name3}`} pair={pair} getLeague={() => ctx.getLeague()} onOpenTrade={(url) => ctx.openExternal(url)} />
       ) : (
         <div style={{ ...PANEL_BOX, padding: 10, minHeight: 96 }}>
-          <div style={{ fontWeight: 600, marginBottom: 4 }}>Position 2 options</div>
+          <div style={{ fontWeight: 600, marginBottom: 4 }}>Back Notable Options</div>
           <div style={{ opacity: 0.6 }}>
             Pick both desired notables. Every notable that can roll into the skippable middle position will be listed here.
           </div>
