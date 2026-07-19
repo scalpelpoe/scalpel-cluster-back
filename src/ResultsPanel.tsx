@@ -3,6 +3,7 @@ import { middlesOnBase, type PairResult } from './calculator'
 import { baseText } from './data'
 import { NotableLabel } from './NotableLabel'
 import { tradeUrl } from './trade-url'
+import { PANEL_BOX } from './ui'
 
 const FAILURE_TEXT: Record<string, string> = {
   'same-group': 'These notables share a mod group and cannot roll together.',
@@ -19,14 +20,14 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
 }): JSX.Element {
   if (!pair.ok) {
     return (
-      <div className="setting-box" style={{ padding: 10 }}>
+      <div style={{ ...PANEL_BOX, padding: 10 }}>
         {FAILURE_TEXT[pair.reason ?? 'no-middles']}
       </div>
     )
   }
   const basesWithMiddles = pair.sharedBases.filter((b) => middlesOnBase(pair.middles, b).length > 0)
   return (
-    <div className="setting-box" style={{ padding: 10 }}>
+    <div style={{ ...PANEL_BOX, padding: 10 }}>
       <div style={{ fontWeight: 600, marginBottom: 6 }}>Position 2 options</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 10 }}>
         {pair.middles.map((m) => (

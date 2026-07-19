@@ -1,6 +1,7 @@
 import { Button } from '@scalpelpoe/plugin-sdk'
 import type { CopiedJewelAnalysis } from './clipboard'
 import { NotableLabel } from './NotableLabel'
+import { PANEL_BOX } from './ui'
 
 /** Compact strip for the last copied Large Cluster Jewel: front pair, the
  *  skippable back notable when present, and a Load pair action. Renders
@@ -15,7 +16,7 @@ export function CopiedJewelStrip({ analysis, onLoad }: {
   const last = recognized[recognized.length - 1]
   const back = recognized.length >= 3 ? recognized[1] : null
   return (
-    <div className="setting-box" style={{ padding: 8, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+    <div style={{ ...PANEL_BOX, padding: 8, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
       <span style={{ opacity: 0.8 }}>Copied jewel:</span>
       <NotableLabel name={first.name} />
       <span>+</span>

@@ -2,6 +2,7 @@ import { RemoveButton, TextInput } from '@scalpelpoe/plugin-sdk'
 import { useState } from 'react'
 import { compatibleWith } from './calculator'
 import { NotableLabel } from './NotableLabel'
+import { PANEL_BOX } from './ui'
 
 const ROW_HEIGHT = 24
 const VISIBLE_ROWS = 6
@@ -32,7 +33,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
     <div>
       <div className="section-title">{label}</div>
       {value ? (
-        <div className="setting-box" style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '3px 8px', minHeight: 26 }}>
+        <div style={{ ...PANEL_BOX, display: 'flex', alignItems: 'center', gap: 6, padding: '3px 8px', minHeight: 26 }}>
           <NotableLabel name={value} />
           <span style={{ marginLeft: 'auto' }}>
             <RemoveButton onClick={() => onChange(null)} />

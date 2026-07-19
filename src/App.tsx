@@ -8,6 +8,7 @@ import { getNotable } from './data'
 import { notableIcon } from './icons'
 import { NotableSelect } from './NotableSelect'
 import { ResultsPanel } from './ResultsPanel'
+import { PANEL_BOX } from './ui'
 
 export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
   const [copied, setCopied] = useState<CopiedJewelAnalysis | null>(() => {
@@ -47,7 +48,7 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
       {pair ? (
         <ResultsPanel pair={pair} getLeague={() => ctx.getLeague()} onOpenTrade={(url) => ctx.openExternal(url)} />
       ) : (
-        <div className="setting-box" style={{ padding: 10, minHeight: 96 }}>
+        <div style={{ ...PANEL_BOX, padding: 10, minHeight: 96 }}>
           <div style={{ fontWeight: 600, marginBottom: 4 }}>Position 2 options</div>
           <div style={{ opacity: 0.6 }}>
             Pick both desired notables. Every notable that can roll into the skippable middle position will be listed here.
