@@ -16,6 +16,7 @@ describe('ResultsPanel', () => {
     expect(buttons).toHaveLength(basesWithMiddles.length + 1)
     fireEvent.click(buttons[0])
     expect(onOpenTrade).toHaveBeenCalledWith(expect.stringContaining('/trade/search/Mercenaries?q='))
+    expect(screen.queryByText(/ilvl range/i)).toBeNull()
   })
 
   it('renders the failure reason for an invalid pair', () => {

@@ -48,9 +48,6 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
           </div>
         )}
       </div>
-      <div style={{ opacity: 0.7, marginTop: 8 }}>
-        Jewel ilvl range: {pair.minIlvl} - {pair.maxIlvl}
-      </div>
     </div>
   )
 }
