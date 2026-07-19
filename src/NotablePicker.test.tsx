@@ -24,4 +24,16 @@ describe('NotablePicker', () => {
     fireEvent.click(chips[0])
     expect(onChange).toHaveBeenCalledWith(['Feed the Fury'])
   })
+
+  it('pares the addable list to notables compatible with the selection', () => {
+    render(<NotablePicker selected={['Prodigious Defence']} onChange={() => {}} />)
+    expect(screen.queryByText('Sadist')).toBeNull()
+    expect(screen.getByText('Feed the Fury')).toBeTruthy()
+    expect(screen.getByText(/incompatible hidden/)).toBeTruthy()
+  })
+
+  it('shows no hidden-count line when nothing is selected', () => {
+    render(<NotablePicker selected={[]} onChange={() => {}} />)
+    expect(screen.queryByText(/incompatible hidden/)).toBeNull()
+  })
 })

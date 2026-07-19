@@ -64,3 +64,12 @@ export function calculateAll(selected: string[]): PairResult[] {
   }
   return out
 }
+
+/** Notables that can join `selected` while keeping every pair valid. The
+ *  picker uses this to make invalid sets unpickable; the copied-jewel Load
+ *  pair path deliberately bypasses it. */
+export function compatibleWith(selected: string[]): NotableInfo[] {
+  return allNotables().filter(
+    (n) => !selected.includes(n.name) && selected.every((s) => calculatePair(s, n.name).ok),
+  )
+}

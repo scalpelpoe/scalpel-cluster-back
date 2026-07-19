@@ -1,4 +1,5 @@
-import { calculateAll, calculatePair, middlesOnBase } from './calculator'
+import { getNotable } from './data'
+import { calculateAll, calculatePair, compatibleWith, middlesOnBase } from './calculator'
 
 describe('calculatePair', () => {
   it('finds the middle notables for Prodigious Defence + Feed the Fury', () => {
@@ -65,5 +66,34 @@ describe('calculateAll', () => {
       ['Prodigious Defence', 'Sadist'],
       ['Feed the Fury', 'Sadist'],
     ])
+  })
+})
+
+describe('compatibleWith', () => {
+  it('returns every notable when nothing is selected', () => {
+    expect(compatibleWith([])).toHaveLength(107)
+  })
+
+  it('excludes the selection itself and anything forming an invalid pair', () => {
+    const names = compatibleWith(['Prodigious Defence']).map((n) => n.name)
+    expect(names).not.toContain('Prodigious Defence')
+    // Sadist shares no jewel base with Prodigious Defence.
+    expect(names).not.toContain('Sadist')
+    expect(names).toContain('Feed the Fury')
+  })
+
+  it('excludes all other suffix notables once a suffix is selected', () => {
+    const names = compatibleWith(['Smite the Weak']).map((n) => n.name)
+    expect(names.length).toBeGreaterThan(0)
+    expect(names.every((name) => !getNotable(name)?.suffix)).toBe(true)
+  })
+
+  it('keeps the whole selection pairwise valid for every candidate', () => {
+    const candidates = compatibleWith(['Prodigious Defence', 'Feed the Fury'])
+    expect(candidates.length).toBeGreaterThan(0)
+    for (const c of candidates) {
+      expect(calculatePair('Prodigious Defence', c.name).ok).toBe(true)
+      expect(calculatePair('Feed the Fury', c.name).ok).toBe(true)
+    }
   })
 })

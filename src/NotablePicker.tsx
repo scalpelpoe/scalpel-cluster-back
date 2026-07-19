@@ -1,11 +1,14 @@
 import { RemoveButton, TextInput } from '@scalpelpoe/plugin-sdk'
 import { useState } from 'react'
+import { compatibleWith } from './calculator'
 import { allNotables } from './data'
 
 export function NotablePicker({ selected, onChange }: { selected: string[]; onChange: (selected: string[]) => void }): JSX.Element {
   const [filter, setFilter] = useState('')
   const query = filter.trim().toLowerCase()
-  const addable = allNotables().filter((n) => !selected.includes(n.name) && (query === '' || n.name.toLowerCase().includes(query)))
+  const compatible = compatibleWith(selected)
+  const hiddenCount = allNotables().length - selected.length - compatible.length
+  const addable = compatible.filter((n) => query === '' || n.name.toLowerCase().includes(query))
 
   return (
     <div>
@@ -33,6 +36,9 @@ export function NotablePicker({ selected, onChange }: { selected: string[]; onCh
           </li>
         ))}
       </ul>
+      {hiddenCount > 0 && (
+        <div style={{ opacity: 0.6, marginTop: 4 }}>{hiddenCount} incompatible hidden</div>
+      )}
     </div>
   )
 }
