@@ -34,7 +34,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
       <div className="section-title">{label}</div>
       {value ? (
         <div style={{ ...INPUT_BOX, display: 'flex', alignItems: 'center', gap: 6 }}>
-          <NotableLabel name={value} />
+          <NotableLabel name={value} size={26} />
           <span style={{ marginLeft: 'auto' }}>
             <RemoveButton onClick={() => onChange(null)} />
           </span>

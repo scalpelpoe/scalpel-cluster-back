@@ -47,6 +47,8 @@ describe('NotableSelect', () => {
     expect(screen.getAllByText('Prodigious Defence')).toHaveLength(1)
     expect(screen.queryByPlaceholderText('Search notables')).toBeNull()
     expect(screen.getAllByRole('listitem').length).toBe(106)
+    const chipLabel = screen.getAllByText('Prodigious Defence')[0]
+    expect(chipLabel.querySelector('img')?.style.width).toBe('26px')
     const swapList = document.querySelector('ul') as HTMLElement
     expect(swapList.style.opacity).toBe('0.55')
     // clicking a list option swaps the pick
