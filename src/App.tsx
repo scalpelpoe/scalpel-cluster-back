@@ -68,7 +68,7 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <NotableSelect label="Desired Notable 1" value={notable1} partner={notable3} onChange={setNotable1} />
-        <NotableSelect label="Desired Notable 3" value={notable3} partner={notable1} onChange={setNotable3} />
+        <NotableSelect label="Desired Notable 2" value={notable3} partner={notable1} onChange={setNotable3} />
       </div>
       {copied && (
         <CopiedJewelStrip

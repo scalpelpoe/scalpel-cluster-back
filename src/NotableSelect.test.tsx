@@ -31,7 +31,7 @@ describe('NotableSelect', () => {
   })
 
   it('limits options to notables compatible with the partner', () => {
-    render(<NotableSelect label="Desired Notable 3" value={null} partner="Prodigious Defence" onChange={() => {}} />)
+    render(<NotableSelect label="Desired Notable 2" value={null} partner="Prodigious Defence" onChange={() => {}} />)
     expect(screen.queryByText('Sadist')).toBeNull()
     expect(screen.getByText('Feed the Fury')).toBeTruthy()
   })

@@ -14,6 +14,9 @@ describe('ResultsPanel', () => {
     expect(select.value).toBe('any')
     expect(screen.getByText(/Calamitous \(ilvl/)).toBeTruthy()
     expect(screen.getByText(/Devastator \(ilvl/)).toBeTruthy()
+    const list = screen.getByRole('list') as HTMLElement
+    expect(list.style.height).toBe('72px')
+    expect(list.style.overflowY).toBe('auto')
     const buttons = screen.getAllByText('Open trade')
     expect(buttons).toHaveLength(1)
     fireEvent.click(buttons[0])
