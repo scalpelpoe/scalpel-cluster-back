@@ -31,7 +31,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
 
   return (
     <div>
-      <div className="section-title">{label}</div>
+      <div className="section-title" style={{ marginBottom: 8 }}>{label}</div>
       {value ? (
         <div style={{ ...INPUT_BOX, display: 'flex', alignItems: 'center', gap: 6 }}>
           <NotableLabel name={value} size={26} />
