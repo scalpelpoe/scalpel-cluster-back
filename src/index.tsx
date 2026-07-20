@@ -10,7 +10,7 @@ const TAB_ICON = renderToStaticMarkup(<SentToBack theme="two-tone" fill={['curre
 
 export default function activate(ctx: ScalpelPluginContext): void {
   ctx.registerTab({
-    label: 'Cluster Jewel Calculator',
+    label: 'Cluster Back',
     icon: TAB_ICON,
     render: (container) => {
       const root = createRoot(container)

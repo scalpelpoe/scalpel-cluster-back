@@ -7,7 +7,7 @@ import { calculatePair, middlesOnBase } from './calculator'
 function makeCtx(): { ctx: ScalpelPluginContext; fireItem: (item: PoeItem) => void } {
   let handler: ((item: PoeItem) => void) | null = null
   const ctx = {
-    pluginId: 'cluster-jewel',
+    pluginId: 'cluster-back',
     pluginVersion: '1.0.0',
     getPoeVersion: () => 1,
     getLeague: () => 'Mercenaries',

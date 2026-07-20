@@ -1,4 +1,4 @@
-# Scalpel Cluster Jewel Calculator
+# Cluster Back
 
 A [Scalpel](https://github.com/scalpelpoe/scalpel) plugin for Path of Exile 1
 Large Cluster Jewels: pick two desired notables and see every notable that can

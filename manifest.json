@@ -1,12 +1,12 @@
 {
   "manifestVersion": 1,
-  "id": "cluster-jewel",
+  "id": "cluster-back",
   "version": "1.0.0",
-  "name": "Cluster Jewel Calculator",
-  "description": "Find which notables can roll in the skippable middle position of a Large Cluster Jewel, and jump to trade searches for optimal jewels.",
+  "name": "Cluster Back",
+  "description": "Large Cluster Jewel finder for PoE1. Pick some desired notables, then find and search trade for options that put a trash notable in back.",
   "author": "scalpelpoe",
-  "homepage": "https://github.com/scalpelpoe/scalpel-cluster-jewel",
-  "iconUrl": "https://raw.githubusercontent.com/scalpelpoe/scalpel-cluster-jewel/main/icon.svg",
+  "homepage": "https://github.com/scalpelpoe/scalpel-cluster-back",
+  "iconUrl": "https://raw.githubusercontent.com/scalpelpoe/scalpel-cluster-back/main/icon.png",
   "scalpelMinVersion": ">=0.9.13-rc3",
   "poeVersions": [1]
 }
