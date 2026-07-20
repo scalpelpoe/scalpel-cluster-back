@@ -10,3 +10,7 @@ export const PANEL_BOX: CSSProperties = {
   background: 'rgba(0, 0, 0, 0.3)',
   borderRadius: 4,
 }
+
+/** Shared min-height for the results panel and its empty-state placeholder so
+ *  swapping between them never shifts the layout below. */
+export const RESULTS_MIN_HEIGHT = 120

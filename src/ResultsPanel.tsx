@@ -5,7 +5,7 @@ import { middlesOnBase, type PairResult } from './calculator'
 import { baseText } from './data'
 import { NotableLabel } from './NotableLabel'
 import { tradeUrl } from './trade-url'
-import { PANEL_BOX } from './ui'
+import { PANEL_BOX, RESULTS_MIN_HEIGHT } from './ui'
 
 const FAILURE_TEXT: Record<string, string> = {
   'same-group': 'These notables share a mod group and cannot roll together.',
@@ -27,14 +27,14 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
   const [choice, setChoice] = useState<string>(hasAny ? 'any' : String(basesWithMiddles[0] ?? ''))
 
   if (!pair.ok) {
-    return <div style={{ ...PANEL_BOX, padding: 10 }}>{FAILURE_TEXT[pair.reason ?? 'no-middles']}</div>
+    return <div style={{ ...PANEL_BOX, padding: 10, minHeight: RESULTS_MIN_HEIGHT }}>{FAILURE_TEXT[pair.reason ?? 'no-middles']}</div>
   }
 
   const baseId = choice === 'any' ? null : Number(choice)
   const shownMiddles = baseId === null ? pair.middles : middlesOnBase(pair.middles, baseId)
 
   return (
-    <div style={{ ...PANEL_BOX, padding: 10 }}>
+    <div style={{ ...PANEL_BOX, padding: 10, minHeight: RESULTS_MIN_HEIGHT }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <div>
           <div className="section-title">Back Notable Options ({shownMiddles.length})</div>

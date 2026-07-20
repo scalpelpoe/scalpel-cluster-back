@@ -4,7 +4,7 @@ import { compatibleWith } from './calculator'
 import { NotableLabel } from './NotableLabel'
 import { PANEL_BOX } from './ui'
 
-const ROW_HEIGHT = 24
+const ROW_HEIGHT = 30
 const VISIBLE_ROWS = 6
 
 /** Autocomplete box for one desired notable. The option list is always
@@ -50,7 +50,17 @@ export function NotableSelect({ label, value, partner, onChange }: {
           }}
         />
       )}
-      <ul style={{ listStyle: 'none', margin: '4px 0 0', padding: 0, height: ROW_HEIGHT * VISIBLE_ROWS, overflowY: 'auto' }}>
+      <ul
+        style={{
+          listStyle: 'none',
+          margin: '4px 0 0',
+          padding: 0,
+          height: ROW_HEIGHT * VISIBLE_ROWS,
+          overflowY: 'auto',
+          background: 'rgba(0, 0, 0, 0.45)',
+          borderRadius: 4,
+        }}
+      >
         {options.map((n) => (
           <li key={n.name}>
             <button
@@ -61,7 +71,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
                 border: 'none',
                 color: 'var(--text)',
                 cursor: 'pointer',
-                padding: '0 4px',
+                padding: '0 6px',
                 width: '100%',
                 textAlign: 'left',
                 height: ROW_HEIGHT,
@@ -69,7 +79,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
                 alignItems: 'center',
               }}
             >
-              <NotableLabel name={n.name} />
+              <NotableLabel name={n.name} size={22} />
             </button>
           </li>
         ))}

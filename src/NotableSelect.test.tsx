@@ -6,10 +6,13 @@ describe('NotableSelect', () => {
     const { container } = render(<NotableSelect label="Desired Notable 1" value={null} partner={null} onChange={() => {}} />)
     const list = container.querySelector('ul')
     expect(list).toBeTruthy()
-    expect(list?.style.height).toBe('144px')
+    expect(list?.style.height).toBe('180px')
+    expect(list?.style.background).toContain('rgba(0, 0, 0, 0.45)')
     const rows = screen.getAllByRole('listitem')
     expect(rows.length).toBe(107)
     expect(rows[0].textContent).toContain('Advance Guard')
+    const firstIcon = rows[0].querySelector('img')
+    expect(firstIcon?.style.width).toBe('22px')
   })
 
   it('filters options by typed text and picks on click', () => {
