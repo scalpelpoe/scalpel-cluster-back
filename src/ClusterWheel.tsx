@@ -4,11 +4,13 @@ import { useId } from 'react'
  *  icon slots parameterized. Geometry matches the in-game subgraph: front-left
  *  and front-right notables, the skippable back notable at top center past the
  *  jewel sockets, and three small-passive slots sharing the jewel base's
- *  small-node art. Null slots render as dark empty sockets. */
+ *  small-node art. Null slots render as dark empty sockets. back accepts an
+ *  icon array and renders it as a pie of wedge-clipped images - the possible
+ *  back notables. */
 export interface WheelSlots {
   left: string | null
   right: string | null
-  back: string | null
+  back: string | string[] | null
   small: string | null
 }
 
@@ -18,12 +20,36 @@ const CENTER_ART =
 export function ClusterWheel({ slots, dimBack }: { slots: WheelSlots; dimBack: boolean }): JSX.Element {
   const uid = useId()
   const pid = (n: number): string => `cw${n}-${uid}`
-  const slotContent = (icon: string | null): JSX.Element =>
-    icon ? (
-      <image href={icon} width="1" height="1" preserveAspectRatio="xMidYMid slice" />
-    ) : (
-      <rect width="1" height="1" fill="#141414" />
+  const slotContent = (icon: string | string[] | null, wedgePrefix = 'w'): JSX.Element => {
+    if (!icon || (Array.isArray(icon) && icon.length === 0)) return <rect width="1" height="1" fill="#141414" />
+    if (typeof icon === 'string' || icon.length === 1) {
+      const href = typeof icon === 'string' ? icon : icon[0]
+      return <image href={href} width="1" height="1" preserveAspectRatio="xMidYMid slice" />
+    }
+    const n = icon.length
+    return (
+      <>
+        <rect width="1" height="1" fill="#141414" />
+        {icon.map((href, i) => {
+          const a0 = ((i / n) * 360 - 90) * (Math.PI / 180)
+          const a1 = (((i + 1) / n) * 360 - 90) * (Math.PI / 180)
+          const x0 = 0.5 + 0.5 * Math.cos(a0)
+          const y0 = 0.5 + 0.5 * Math.sin(a0)
+          const x1 = 0.5 + 0.5 * Math.cos(a1)
+          const y1 = 0.5 + 0.5 * Math.sin(a1)
+          const cid = `${pid(9)}-${wedgePrefix}-${i}`
+          return (
+            <g key={cid}>
+              <clipPath id={cid}>
+                <path d={`M 0.5 0.5 L ${x0} ${y0} A 0.5 0.5 0 0 1 ${x1} ${y1} Z`} />
+              </clipPath>
+              <image href={href} width="1" height="1" preserveAspectRatio="xMidYMid slice" clipPath={`url(#${cid})`} />
+            </g>
+          )
+        })}
+      </>
     )
+  }
   return (
     <svg style={{ width: '100%', height: 'auto', display: 'block' }} width="280" height="303" viewBox="0 0 280 303" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="139.844" cy="143.206" r="113" fill="#14120D" stroke="#433C2D"/>
@@ -138,7 +164,7 @@ export function ClusterWheel({ slots, dimBack }: { slots: WheelSlots; dimBack: b
     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
     <feBlend mode="normal" in2="effect1_innerShadow_4019_2201" result="effect2_innerShadow_4019_2201"/>
     </filter>
-    <pattern id={pid(2)} patternContentUnits="objectBoundingBox" width="1" height="1">{slotContent(slots.back)}</pattern>
+    <pattern id={pid(2)} patternContentUnits="objectBoundingBox" width="1" height="1">{slotContent(slots.back, 'back')}</pattern>
     <pattern id={pid(3)} patternContentUnits="objectBoundingBox" width="1" height="1">{slotContent(slots.small)}</pattern>
     <pattern id={pid(4)} patternContentUnits="objectBoundingBox" width="1" height="1">{slotContent(slots.small)}</pattern>
     <pattern id={pid(5)} patternContentUnits="objectBoundingBox" width="1" height="1">{slotContent(slots.small)}</pattern>

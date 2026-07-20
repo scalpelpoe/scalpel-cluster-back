@@ -2,6 +2,7 @@ import { fireEvent, render, screen, act, within } from '@testing-library/react'
 import type { PoeItem, ScalpelPluginContext } from '@scalpelpoe/plugin-sdk'
 import { defaultPoeItem } from '@scalpelpoe/plugin-sdk'
 import { App } from './App'
+import { calculatePair, middlesOnBase } from './calculator'
 
 function makeCtx(): { ctx: ScalpelPluginContext; fireItem: (item: PoeItem) => void } {
   let handler: ((item: PoeItem) => void) | null = null
@@ -117,8 +118,8 @@ describe('App', () => {
     const { container } = render(<App ctx={ctx} />)
     pick('Desired Notable 1', 'prodig', 'Prodigious Defence')
     pick('Desired Notable 2', 'feed the', 'Feed the Fury')
-    // shield-only pair: 2 notable icons + 3 base smalls in the wheel patterns
-    expect(container.querySelectorAll('pattern image')).toHaveLength(5)
+    // shield-only pair: 2 notable icons + 3 base smalls + 3 back-pie wedges
+    expect(container.querySelectorAll('pattern image')).toHaveLength(8)
   })
 
   it('fills smalls on multi-base pairs only once a specific base is chosen', () => {
@@ -126,11 +127,15 @@ describe('App', () => {
     const { container } = render(<App ctx={ctx} />)
     pick('Desired Notable 1', 'fuel the', 'Fuel the Fight')
     pick('Desired Notable 2', 'martial p', 'Martial Prowess')
-    // Any Base default: only the two notable icons
-    expect(container.querySelectorAll('pattern image')).toHaveLength(2)
+    // Any Base default: two notable icons + one wedge per middle candidate
+    const pair = calculatePair('Fuel the Fight', 'Martial Prowess')
+    if (!pair.ok) throw new Error('expected ok pair')
+    expect(container.querySelectorAll('pattern image')).toHaveLength(2 + pair.middles.length)
     const select = screen.getByRole('combobox') as HTMLSelectElement
     const firstBase = [...select.options].map((o) => o.value).find((v) => v !== 'any')
     fireEvent.change(select, { target: { value: firstBase } })
-    expect(container.querySelectorAll('pattern image')).toHaveLength(5)
+    const onBase = middlesOnBase(pair.middles, Number(firstBase))
+    // specific base: notables + 3 smalls + that base's candidates (1 candidate renders unclipped)
+    expect(container.querySelectorAll('pattern image')).toHaveLength(5 + onBase.length)
   })
 })

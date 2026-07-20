@@ -50,4 +50,25 @@ describe('ClusterWheel', () => {
     expect(ids).toHaveLength(14)
     expect(new Set(ids).size).toBe(14)
   })
+
+  it('renders a pie of wedge-clipped images when back is an icon array', () => {
+    const icons = [notableIcon('Smite the Weak'), notableIcon('Heavy Hitter'), notableIcon('Martial Prowess')].filter(
+      (i): i is string => i != null,
+    )
+    const { container } = render(<ClusterWheel slots={{ ...EMPTY, back: icons }} dimBack={false} />)
+    // jsdom's selector engine cannot match descendants under camelCase SVG tags (clipPath path), so assert structure directly.
+    const clips = [...container.querySelectorAll('clipPath')]
+    expect(clips).toHaveLength(3)
+    for (const c of clips) expect(c.firstElementChild?.tagName.toLowerCase()).toBe('path')
+    const clipped = [...container.querySelectorAll('pattern image')].filter((i) => i.getAttribute('clip-path'))
+    expect(clipped).toHaveLength(3)
+  })
+
+  it('renders a single-element back array as one unclipped image', () => {
+    const icon = notableIcon('Smite the Weak')
+    if (!icon) throw new Error('icon missing')
+    const { container } = render(<ClusterWheel slots={{ ...EMPTY, back: [icon] }} dimBack={false} />)
+    expect(container.querySelectorAll('clipPath')).toHaveLength(0)
+    expect(container.querySelectorAll('pattern image')).toHaveLength(1)
+  })
 })

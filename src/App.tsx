@@ -53,6 +53,14 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
         ? Number(baseChoice)
         : null
 
+  const shownMiddles = pair?.ok ? (knownBase != null ? middlesOnBase(pair.middles, knownBase) : pair.middles) : []
+  const backSlot =
+    shownMiddles.length === 0
+      ? null
+      : shownMiddles.length === 1
+        ? notableIcon(shownMiddles[0].name)
+        : shownMiddles.map((m) => notableIcon(m.name)).filter((i): i is string => i != null)
+
   return (
     <div style={{ padding: 12, color: 'var(--text)', display: 'flex', flexDirection: 'column', gap: 12 }}>
       {pair ? (
@@ -70,7 +78,7 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
           slots={{
             left: leftName ? notableIcon(leftName) : null,
             right: rightName ? notableIcon(rightName) : null,
-            back: null,
+            back: backSlot,
             small: knownBase != null ? baseSmallIcon(knownBase) : null,
           }}
           dimBack={false}
