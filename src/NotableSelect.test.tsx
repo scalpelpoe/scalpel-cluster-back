@@ -6,13 +6,14 @@ describe('NotableSelect', () => {
     const { container } = render(<NotableSelect label="Desired Notable 1" value={null} partner={null} onChange={() => {}} />)
     const list = container.querySelector('ul')
     expect(list).toBeTruthy()
-    expect(list?.style.height).toBe('180px')
+    expect(list?.style.height).toBe('240px')
     expect(list?.style.background).toContain('rgba(0, 0, 0, 0.45)')
+    expect(list?.style.opacity).toBe('1')
     const rows = screen.getAllByRole('listitem')
     expect(rows.length).toBe(107)
     expect(rows[0].textContent).toContain('Advance Guard')
     const firstIcon = rows[0].querySelector('img')
-    expect(firstIcon?.style.width).toBe('22px')
+    expect(firstIcon?.style.width).toBe('26px')
   })
 
   it('filters options by typed text and picks on click', () => {
@@ -46,6 +47,8 @@ describe('NotableSelect', () => {
     expect(screen.getAllByText('Prodigious Defence')).toHaveLength(1)
     expect(screen.queryByPlaceholderText('Search notables')).toBeNull()
     expect(screen.getAllByRole('listitem').length).toBe(106)
+    const swapList = document.querySelector('ul') as HTMLElement
+    expect(swapList.style.opacity).toBe('0.55')
     // clicking a list option swaps the pick
     fireEvent.click(screen.getByText('Feed the Fury'))
     expect(onChange).toHaveBeenCalledWith('Feed the Fury')

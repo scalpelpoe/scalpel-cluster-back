@@ -5,7 +5,7 @@ import { middlesOnBase, type PairResult } from './calculator'
 import { baseText } from './data'
 import { NotableLabel } from './NotableLabel'
 import { tradeUrl } from './trade-url'
-import { PANEL_BOX, RESULTS_MIN_HEIGHT } from './ui'
+import { INPUT_BOX, PANEL_BOX, RESULTS_MIN_HEIGHT } from './ui'
 
 const FAILURE_TEXT: Record<string, string> = {
   'same-group': 'These notables share a mod group and cannot roll together.',
@@ -48,19 +48,7 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
         </div>
         <div>
           <div className="section-title">Cluster Base</div>
-          <select
-            value={choice}
-            onChange={(e) => setChoice(e.target.value)}
-            style={{
-              width: '100%',
-              marginTop: 4,
-              padding: '4px 8px',
-              background: 'rgba(0, 0, 0, 0.3)',
-              color: 'var(--text)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
-              borderRadius: 4,
-            }}
-          >
+          <select value={choice} onChange={(e) => setChoice(e.target.value)} style={{ ...INPUT_BOX, marginTop: 4 }}>
             {hasAny && <option value="any">Any Base</option>}
             {basesWithMiddles.map((id) => (
               <option key={id} value={String(id)} title={baseText(id)}>

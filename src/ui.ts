@@ -14,3 +14,17 @@ export const PANEL_BOX: CSSProperties = {
 /** Shared min-height for the results panel and its empty-state placeholder so
  *  swapping between them never shifts the layout below. */
 export const RESULTS_MIN_HEIGHT = 120
+
+/** House input chrome, matching Scalpel's own inputs (regex base picker,
+ *  hotkey field): dark black/30 fill, no stroke, 40px-tall rounded box. */
+export const INPUT_BOX: CSSProperties = {
+  width: '100%',
+  boxSizing: 'border-box',
+  minHeight: 40,
+  padding: '8px 12px',
+  background: 'rgba(0, 0, 0, 0.3)',
+  border: 'none',
+  outline: 'none',
+  borderRadius: 4,
+  color: 'var(--text)',
+}

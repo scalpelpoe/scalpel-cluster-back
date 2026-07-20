@@ -1,10 +1,10 @@
-import { RemoveButton, TextInput } from '@scalpelpoe/plugin-sdk'
+import { RemoveButton } from '@scalpelpoe/plugin-sdk'
 import { useState } from 'react'
 import { compatibleWith } from './calculator'
 import { NotableLabel } from './NotableLabel'
-import { PANEL_BOX } from './ui'
+import { INPUT_BOX } from './ui'
 
-const ROW_HEIGHT = 30
+const ROW_HEIGHT = 40
 const VISIBLE_ROWS = 6
 
 /** Autocomplete box for one desired notable. The option list is always
@@ -33,19 +33,20 @@ export function NotableSelect({ label, value, partner, onChange }: {
     <div>
       <div className="section-title">{label}</div>
       {value ? (
-        <div style={{ ...PANEL_BOX, display: 'flex', alignItems: 'center', gap: 6, padding: '3px 8px', minHeight: 26 }}>
+        <div style={{ ...INPUT_BOX, display: 'flex', alignItems: 'center', gap: 6 }}>
           <NotableLabel name={value} />
           <span style={{ marginLeft: 'auto' }}>
             <RemoveButton onClick={() => onChange(null)} />
           </span>
         </div>
       ) : (
-        <TextInput
+        <input
+          type="text"
           placeholder="Search notables"
           value={filter}
-          fullWidth
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilter(e.target.value)}
-          onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+          style={INPUT_BOX}
+          onChange={(e) => setFilter(e.target.value)}
+          onKeyDown={(e) => {
             if (e.key === 'Enter' && options.length > 0) pickOption(options[0].name)
           }}
         />
@@ -59,6 +60,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
           overflowY: 'auto',
           background: 'rgba(0, 0, 0, 0.45)',
           borderRadius: 4,
+          opacity: value ? 0.55 : 1,
         }}
       >
         {options.map((n) => (
@@ -79,7 +81,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
                 alignItems: 'center',
               }}
             >
-              <NotableLabel name={n.name} size={22} />
+              <NotableLabel name={n.name} size={26} />
             </button>
           </li>
         ))}
