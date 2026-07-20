@@ -48,7 +48,21 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
         </div>
         <div>
           <div className="section-title">Cluster Base</div>
-          <select value={choice} onChange={(e) => setChoice(e.target.value)} style={{ ...INPUT_BOX, marginTop: 4 }}>
+          <select
+            value={choice}
+            onChange={(e) => setChoice(e.target.value)}
+            style={{
+              ...INPUT_BOX,
+              marginTop: 4,
+              appearance: 'none',
+              WebkitAppearance: 'none',
+              paddingRight: 28,
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239e9480' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\")",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right 10px center',
+            }}
+          >
             {hasAny && <option value="any">Any Base</option>}
             {basesWithMiddles.map((id) => (
               <option key={id} value={String(id)} title={baseText(id)}>

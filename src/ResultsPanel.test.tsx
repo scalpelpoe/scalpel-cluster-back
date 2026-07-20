@@ -12,6 +12,7 @@ describe('ResultsPanel', () => {
     expect(screen.getByText('Cluster Base')).toBeTruthy()
     const select = screen.getByRole('combobox') as HTMLSelectElement
     expect(select.value).toBe('any')
+    expect(select.style.backgroundImage).toContain('svg+xml')
     expect(screen.getByText(/Calamitous \(ilvl/)).toBeTruthy()
     expect(screen.getByText(/Devastator \(ilvl/)).toBeTruthy()
     const list = screen.getByRole('list') as HTMLElement
