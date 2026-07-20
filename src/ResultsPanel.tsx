@@ -1,5 +1,4 @@
 import { Button } from '@scalpelpoe/plugin-sdk'
-import { useState } from 'react'
 import { baseShortName } from './base-names'
 import { middlesOnBase, type PairResult } from './calculator'
 import { baseText } from './data'
@@ -17,20 +16,22 @@ const FAILURE_TEXT: Record<string, string> = {
  *  the cluster-base dropdown plus the trade action on the right. The base
  *  choice filters the list and scopes the trade search; "Any Base" exists
  *  only when more than one base can actually produce a middle. */
-export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
+export function ResultsPanel({ pair, choice, onChoiceChange, getLeague, onOpenTrade }: {
   pair: PairResult
+  choice: string
+  onChoiceChange: (choice: string) => void
   getLeague: () => string
   onOpenTrade: (url: string) => void
 }): JSX.Element {
   const basesWithMiddles = pair.sharedBases.filter((b) => middlesOnBase(pair.middles, b).length > 0)
   const hasAny = basesWithMiddles.length > 1
-  const [choice, setChoice] = useState<string>(hasAny ? 'any' : String(basesWithMiddles[0] ?? ''))
 
   if (!pair.ok) {
     return <div style={{ ...PANEL_BOX, padding: 10, minHeight: RESULTS_MIN_HEIGHT }}>{FAILURE_TEXT[pair.reason ?? 'no-middles']}</div>
   }
 
-  const baseId = choice === 'any' ? null : Number(choice)
+  const value = hasAny ? choice : String(basesWithMiddles[0] ?? '')
+  const baseId = value === 'any' ? null : Number(value)
   const shownMiddles = baseId === null ? pair.middles : middlesOnBase(pair.middles, baseId)
 
   return (
@@ -49,8 +50,8 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
         <div>
           <div className="section-title">Cluster Base</div>
           <select
-            value={choice}
-            onChange={(e) => setChoice(e.target.value)}
+            value={value}
+            onChange={(e) => onChoiceChange(e.target.value)}
             style={{
               ...INPUT_BOX,
               marginTop: 4,

@@ -1,11 +1,11 @@
 import type { PoeItem, ScalpelPluginContext } from '@scalpelpoe/plugin-sdk'
 import { useEffect, useState } from 'react'
-import { calculatePair } from './calculator'
+import { calculatePair, middlesOnBase } from './calculator'
 import { analyzeClusterItem, type CopiedJewelAnalysis } from './clipboard'
 import { ClusterWheel } from './ClusterWheel'
 import { CopiedJewelStrip } from './CopiedJewelStrip'
 import { getNotable } from './data'
-import { notableIcon } from './icons'
+import { baseSmallIcon, notableIcon } from './icons'
 import { NotableSelect } from './NotableSelect'
 import { ResultsPanel } from './ResultsPanel'
 import { PANEL_BOX, RESULTS_MIN_HEIGHT } from './ui'
@@ -17,6 +17,7 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
   })
   const [notable1, setNotable1] = useState<string | null>(null)
   const [notable3, setNotable3] = useState<string | null>(null)
+  const [baseChoice, setBaseChoice] = useState<string>('any')
 
   useEffect(
     () =>
@@ -43,10 +44,19 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
     }
   }
 
+  const basesWithMiddles = pair?.ok ? pair.sharedBases.filter((b) => middlesOnBase(pair.middles, b).length > 0) : []
+  const knownBase = !pair?.ok
+    ? null
+    : basesWithMiddles.length === 1
+      ? basesWithMiddles[0]
+      : baseChoice !== 'any'
+        ? Number(baseChoice)
+        : null
+
   return (
     <div style={{ padding: 12, color: 'var(--text)', display: 'flex', flexDirection: 'column', gap: 12 }}>
       {pair ? (
-        <ResultsPanel key={`${pair.name1}|${pair.name3}`} pair={pair} getLeague={() => ctx.getLeague()} onOpenTrade={(url) => ctx.openExternal(url)} />
+        <ResultsPanel pair={pair} choice={baseChoice} onChoiceChange={setBaseChoice} getLeague={() => ctx.getLeague()} onOpenTrade={(url) => ctx.openExternal(url)} />
       ) : (
         <div style={{ ...PANEL_BOX, padding: 10, minHeight: RESULTS_MIN_HEIGHT, display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontWeight: 600, marginBottom: 4 }}>Back Notable Options</div>
@@ -61,14 +71,30 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
             left: leftName ? notableIcon(leftName) : null,
             right: rightName ? notableIcon(rightName) : null,
             back: null,
-            small: null,
+            small: knownBase != null ? baseSmallIcon(knownBase) : null,
           }}
           dimBack={false}
         />
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-        <NotableSelect label="Desired Notable 1" value={notable1} partner={notable3} onChange={setNotable1} />
-        <NotableSelect label="Desired Notable 2" value={notable3} partner={notable1} onChange={setNotable3} />
+        <NotableSelect
+          label="Desired Notable 1"
+          value={notable1}
+          partner={notable3}
+          onChange={(v) => {
+            setNotable1(v)
+            setBaseChoice('any')
+          }}
+        />
+        <NotableSelect
+          label="Desired Notable 2"
+          value={notable3}
+          partner={notable1}
+          onChange={(v) => {
+            setNotable3(v)
+            setBaseChoice('any')
+          }}
+        />
       </div>
       {copied && (
         <CopiedJewelStrip
@@ -76,6 +102,7 @@ export function App({ ctx }: { ctx: ScalpelPluginContext }): JSX.Element {
           onLoad={([a, b]) => {
             setNotable1(a)
             setNotable3(b)
+            setBaseChoice('any')
           }}
         />
       )}

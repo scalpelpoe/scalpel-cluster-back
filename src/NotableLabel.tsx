@@ -5,7 +5,7 @@ import { notableIcon } from './icons'
 export function NotableLabel({ name, detail, size = 16 }: { name: string; detail?: string; size?: number }): JSX.Element {
   const icon = notableIcon(name)
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, verticalAlign: 'middle' }}>
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, verticalAlign: 'middle' }}>
       {icon && <img src={icon} alt="" draggable={false} style={{ width: size, height: size, flexShrink: 0 }} />}
       {detail ? `${name} ${detail}` : name}
     </span>
