@@ -37,7 +37,7 @@ export function ResultsPanel({ pair, getLeague, onOpenTrade }: {
     <div style={{ ...PANEL_BOX, padding: 10 }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <div>
-          <div className="section-title">Back Notable Options</div>
+          <div className="section-title">Back Notable Options ({shownMiddles.length})</div>
           <ul style={{ listStyle: 'none', margin: '4px 0 0', padding: 0, height: 72, overflowY: 'auto' }}>
             {shownMiddles.map((m) => (
               <li key={m.name} style={{ height: 24, display: 'flex', alignItems: 'center' }}>

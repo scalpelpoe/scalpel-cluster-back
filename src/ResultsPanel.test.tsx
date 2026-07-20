@@ -8,7 +8,7 @@ describe('ResultsPanel', () => {
     if (!pair.ok) throw new Error(`expected ok pair, got ${pair.reason}`)
     const onOpenTrade = vi.fn()
     render(<ResultsPanel pair={pair} getLeague={() => 'Mercenaries'} onOpenTrade={onOpenTrade} />)
-    expect(screen.getByText('Back Notable Options')).toBeTruthy()
+    expect(screen.getByText(`Back Notable Options (${pair.middles.length})`)).toBeTruthy()
     expect(screen.getByText('Cluster Base')).toBeTruthy()
     const select = screen.getByRole('combobox') as HTMLSelectElement
     expect(select.value).toBe('any')
@@ -36,6 +36,7 @@ describe('ResultsPanel', () => {
     for (const m of expected) expect(screen.getByText(new RegExp(`${m.name} \\(ilvl`))).toBeTruthy()
     const shown = screen.getAllByRole('listitem')
     expect(shown).toHaveLength(expected.length)
+    expect(screen.getByText(`Back Notable Options (${expected.length})`)).toBeTruthy()
     fireEvent.click(screen.getByText('Open trade'))
     expect(onOpenTrade).toHaveBeenCalledWith(expect.stringContaining('3948993189'))
   })
