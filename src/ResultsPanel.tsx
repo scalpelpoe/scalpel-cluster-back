@@ -72,7 +72,7 @@ export function ResultsPanel({ pair, choice, onChoiceChange, getLeague, onOpenTr
             ))}
           </select>
           <div style={{ marginTop: 8 }}>
-            <Button onClick={() => onOpenTrade(tradeUrl(getLeague(), pair, baseId))}>Open trade</Button>
+            <Button onClick={() => onOpenTrade(tradeUrl(getLeague(), pair, baseId))}>Find on Trade Site</Button>
           </div>
         </div>
       </div>

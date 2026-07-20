@@ -24,7 +24,7 @@ describe('ResultsPanel', () => {
     const list = screen.getByRole('list') as HTMLElement
     expect(list.style.height).toBe('72px')
     expect(list.style.overflowY).toBe('auto')
-    const buttons = screen.getAllByText('Open trade')
+    const buttons = screen.getAllByText('Find on Trade Site')
     expect(buttons).toHaveLength(1)
     fireEvent.click(buttons[0])
     // any-base query carries no base enchant filter
@@ -44,7 +44,7 @@ describe('ResultsPanel', () => {
     const shown = screen.getAllByRole('listitem')
     expect(shown).toHaveLength(expected.length)
     expect(screen.getByText(`Back Notable Options (${expected.length})`)).toBeTruthy()
-    fireEvent.click(screen.getByText('Open trade'))
+    fireEvent.click(screen.getByText('Find on Trade Site'))
     expect(onOpenTrade).toHaveBeenCalledWith(expect.stringContaining('3948993189'))
   })
 
