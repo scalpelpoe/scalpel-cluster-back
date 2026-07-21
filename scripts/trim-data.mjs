@@ -9,8 +9,10 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)))
 const fullPath = resolve(root, 'scripts/vendor/data-full.json')
 const outPath = resolve(root, 'src/data/cluster-data.json')
 const enchantOptionsPath = resolve(root, 'scripts/vendor/enchant-options.json')
+const notableStatsPath = resolve(root, 'scripts/vendor/notable-stats.json')
 
 const full = JSON.parse(readFileSync(fullPath, 'utf8'))
+const notableStats = JSON.parse(readFileSync(notableStatsPath, 'utf8'))
 const large = full.Notables.Large
 const grantStat = full.TradeStats.Enchant['Added Small Passive Skills grant: #']
 const addsStat = full.TradeStats.Enchant['Adds # Passive Skills']
@@ -89,6 +91,8 @@ for (const name of Object.keys(large).sort((a, b) => a.localeCompare(b))) {
     }
     baseIds.push(optionByKey.get(key).id)
   }
+  const stats = notableStats[name]
+  if (!Array.isArray(stats) || stats.length === 0) fail(`no stat lines for notable "${name}" - run: node scripts/fetch-notable-stats.mjs`)
   notables[name] = {
     rid: n.Stat._rid,
     group: n.Mod.CorrectGroup,
@@ -96,6 +100,7 @@ for (const name of Object.keys(large).sort((a, b) => a.localeCompare(b))) {
     suffix: n.Mod.CorrectGroup.includes('Suffix'),
     tradeId,
     bases: [...new Set(baseIds)].sort((a, b) => a - b),
+    stats,
   }
 }
 

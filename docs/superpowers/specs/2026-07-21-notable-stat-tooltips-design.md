@@ -59,9 +59,21 @@ same pattern as `fetch-icons.mjs`.
 - **`src/NotableLabel.tsx`**: hover shows a custom tooltip (the SDK has no
   Tooltip component):
   - `position: fixed` div anchored to the label's bounding rect, clamped to
-    the viewport, so `overflowY: auto` option lists cannot clip it. No portal.
+    the viewport, so `overflowY: auto` option lists cannot clip it.
+  - Rendered via `createPortal(document.body)`. (Correction to the original
+    design, which said "no portal": the Scalpel overlay positions itself with
+    a CSS transform, and a transformed ancestor becomes the containing block
+    for `position: fixed` descendants — rendered in place, the tooltip lands
+    offset by the overlay's translation. The host's own HoverTooltip portals
+    to document.body for the same reason, and recovers the overlay scale via
+    `rect.width / offsetWidth`; the tooltip does both.)
   - Dark panel styling consistent with `PANEL_BOX` in `ui.ts`; one line per
     stat in mod-blue (`#8888ff`-family, matching the game's magic-mod color).
+  - Below the stats, a muted "Possible Bases:" section lists the cluster
+    bases (short names from `base-names.ts`) the notable can roll on: all of
+    its bases by default, narrowed via an optional `tooltipBases` prop where
+    the caller has context — bases shared with the partner pick in
+    `NotableSelect`, bases shared with the selected pair in `ResultsPanel`.
   - Instant show on mouse enter, hidden on leave. ~40 lines, no dependencies.
   - No tooltip when the name has no stats (unknown notable).
 - Every notable name already renders through `NotableLabel` (select boxes,

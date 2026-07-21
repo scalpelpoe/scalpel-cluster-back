@@ -58,6 +58,17 @@ describe('ResultsPanel', () => {
     expect(screen.getByText('Shield - Attack Damage')).toBeTruthy()
   })
 
+  it('scopes middle tooltips to the pair shared bases', () => {
+    const pair = calculatePair('Prodigious Defence', 'Feed the Fury')
+    if (!pair.ok) throw new Error('expected ok pair')
+    render(<Harness pair={pair} />)
+    const middle = pair.middles[0]
+    fireEvent.mouseEnter(screen.getByText(`${middle.name} (ilvl ${middle.ilvl})`))
+    // dropdown option + tooltip line both carry the shared base's short name
+    expect(screen.getAllByText('Shield - Attack Damage').length).toBeGreaterThan(1)
+    expect(screen.queryByText('Axe/Sword - Hits & Ailments')).toBeNull()
+  })
+
   it('renders the failure reason for an invalid pair', () => {
     const pair = calculatePair('Sadist', 'Prodigious Defence')
     render(<Harness pair={pair} />)

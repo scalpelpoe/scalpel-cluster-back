@@ -1,6 +1,7 @@
 import { RemoveButton } from '@scalpelpoe/plugin-sdk'
 import { useState } from 'react'
 import { compatibleWith } from './calculator'
+import { getNotable } from './data'
 import { NotableLabel } from './NotableLabel'
 import { INPUT_BOX } from './ui'
 
@@ -23,6 +24,10 @@ export function NotableSelect({ label, value, partner, onChange }: {
   const options = compatibleWith(partner ? [partner] : []).filter(
     (n) => n.name !== value && (query === '' || n.name.toLowerCase().includes(query)),
   )
+  // With a partner chosen, tooltips list only the bases both notables share.
+  const partnerBases = partner ? getNotable(partner)?.bases : undefined
+  const sharedWith = (bases: number[] | undefined): number[] | undefined =>
+    partnerBases && bases ? bases.filter((b) => partnerBases.includes(b)) : undefined
 
   function pickOption(name: string): void {
     setFilter('')
@@ -34,7 +39,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
       <div className="section-title" style={{ marginBottom: 8 }}>{label}</div>
       {value ? (
         <div style={{ ...INPUT_BOX, display: 'flex', alignItems: 'center', gap: 6 }}>
-          <NotableLabel name={value} size={26} />
+          <NotableLabel name={value} size={26} tooltipBases={sharedWith(getNotable(value)?.bases)} />
           <span style={{ marginLeft: 'auto' }}>
             <RemoveButton onClick={() => onChange(null)} />
           </span>
@@ -81,7 +86,7 @@ export function NotableSelect({ label, value, partner, onChange }: {
                 alignItems: 'center',
               }}
             >
-              <NotableLabel name={n.name} size={26} />
+              <NotableLabel name={n.name} size={26} tooltipBases={sharedWith(n.bases)} />
             </button>
           </li>
         ))}

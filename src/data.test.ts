@@ -50,4 +50,18 @@ describe('data accessors', () => {
     expect(new Set(all.map((n) => n.rid)).size).toBe(all.length)
     for (const n of all) expect(n.bases.length).toBeGreaterThan(0)
   })
+
+  it('carries in-game stat lines for every notable', () => {
+    for (const n of allNotables()) expect(n.stats.length).toBeGreaterThan(0)
+    expect(getNotable('Prodigious Defence')?.stats).toEqual([
+      '+3% Chance to Block Attack Damage',
+      '3% Chance to Block Spell Damage',
+      '30% increased Attack Damage while holding a Shield',
+    ])
+    expect(getNotable('Renewal')?.stats).toEqual([
+      'Minions have 5% chance to deal Double Damage while they are on Full Life',
+      'Minions Regenerate 1% of Life per second',
+    ])
+    expect(getNotable('Strike Leader')?.stats).toContain('+0.2 metres to Melee Strike Range while Holding a Shield')
+  })
 })

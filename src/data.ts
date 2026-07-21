@@ -8,6 +8,7 @@ export interface NotableInfo {
   suffix: boolean
   tradeId: string
   bases: number[]
+  stats: string[]
 }
 
 interface ClusterData {

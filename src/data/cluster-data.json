@@ -31,6 +31,11 @@
       "tradeId": "explicit.stat_1625939562",
       "bases": [
         8
+      ],
+      "stats": [
+        "Attack Skills deal 30% increased Damage while holding a Shield",
+        "5% increased Movement Speed while holding a Shield",
+        "Ignore all Movement Penalties from Armour"
       ]
     },
     "Aggressive Defence": {
@@ -43,6 +48,11 @@
         1,
         2,
         3
+      ],
+      "stats": [
+        "Fortifying Hits grant 60% increased Fortification",
+        "30% increased Fortification Duration",
+        "20% increased Damage with Attack Skills while Fortified"
       ]
     },
     "Ancestral Inspiration": {
@@ -53,6 +63,10 @@
       "tradeId": "explicit.stat_77045106",
       "bases": [
         10
+      ],
+      "stats": [
+        "Gain Arcane Surge when you Summon a Totem",
+        "Spells cast by Totems deal 25% increased Damage"
       ]
     },
     "Arcane Adept": {
@@ -63,6 +77,11 @@
       "tradeId": "explicit.stat_393565679",
       "bases": [
         10
+      ],
+      "stats": [
+        "Channelling Skills deal 20% increased Damage",
+        "5% increased Attack and Cast Speed while Channelling",
+        "Gain Arcane Surge after Channelling for 1 second"
       ]
     },
     "Arcane Heroism": {
@@ -73,6 +92,10 @@
       "tradeId": "explicit.stat_3901992019",
       "bases": [
         10
+      ],
+      "stats": [
+        "10% chance to gain Arcane Surge when you Hit a Unique enemy",
+        "30% increased Effect of Arcane Surge on you"
       ]
     },
     "Arcing Shot": {
@@ -83,6 +106,10 @@
       "tradeId": "explicit.stat_3212859169",
       "bases": [
         4
+      ],
+      "stats": [
+        "Arrows gain Damage as they travel farther, dealing up to 50% increased Damage with Hits to targets",
+        "Arrows gain Critical Strike Chance as they travel farther, up to 100% increased Critical Strike Chance"
       ]
     },
     "Battle-Hardened": {
@@ -93,6 +120,10 @@
       "tradeId": "explicit.stat_4188581520",
       "bases": [
         12
+      ],
+      "stats": [
+        "35% increased Physical Damage",
+        "30% increased Evasion Rating and Armour"
       ]
     },
     "Battlefield Dominator": {
@@ -103,6 +134,11 @@
       "tradeId": "explicit.stat_1499057234",
       "bases": [
         6
+      ],
+      "stats": [
+        "15% increased Area of Effect if you've Stunned an Enemy with a Two Handed Melee Weapon Recently",
+        "Attacks with Two Handed Weapons deal 25% increased Damage with Hits and Ailments",
+        "10% reduced Enemy Stun Threshold"
       ]
     },
     "Blanketed Snow": {
@@ -113,6 +149,9 @@
       "tradeId": "explicit.stat_1085167979",
       "bases": [
         15
+      ],
+      "stats": [
+        "Damage Penetrates 10% Cold Resistance against Chilled Enemies"
       ]
     },
     "Blast-Freeze": {
@@ -123,6 +162,10 @@
       "tradeId": "explicit.stat_693808153",
       "bases": [
         15
+      ],
+      "stats": [
+        "20% increased Cold Damage",
+        "Freezes you inflict spread to other Enemies within 1.2 metres"
       ]
     },
     "Blizzard Caller": {
@@ -133,6 +176,10 @@
       "tradeId": "explicit.stat_3758712376",
       "bases": [
         15
+      ],
+      "stats": [
+        "40% increased Frostbite Curse Effect",
+        "15% increased Critical Strike Chance"
       ]
     },
     "Bloodscent": {
@@ -143,6 +190,9 @@
       "tradeId": "explicit.stat_3967765261",
       "bases": [
         1
+      ],
+      "stats": [
+        "Attacks with Axes or Swords grant 1 Rage on Hit"
       ]
     },
     "Broadside": {
@@ -153,6 +203,9 @@
       "tradeId": "explicit.stat_2205982416",
       "bases": [
         4
+      ],
+      "stats": [
+        "Bow Skills have 25% increased Area of Effect"
       ]
     },
     "Brutal Infamy": {
@@ -163,6 +216,10 @@
       "tradeId": "explicit.stat_2068574831",
       "bases": [
         6
+      ],
+      "stats": [
+        "Attacks with Two Handed Melee Weapons deal 20% increased Damage with Hits and Ailments",
+        "40% increased Damage with Hits and Ailments against Unique Enemies"
       ]
     },
     "Burden Projection": {
@@ -173,6 +230,10 @@
       "tradeId": "explicit.stat_2008682345",
       "bases": [
         10
+      ],
+      "stats": [
+        "30% increased Spell Damage",
+        "8% chance to Knock Enemies Back on Hit with Spell Damage"
       ]
     },
     "Burning Bright": {
@@ -183,6 +244,10 @@
       "tradeId": "explicit.stat_4199056048",
       "bases": [
         13
+      ],
+      "stats": [
+        "25% increased Burning Damage",
+        "8% increased Area of Effect"
       ]
     },
     "Calamitous": {
@@ -201,6 +266,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "30% increased Elemental Damage with Attack Skills",
+        "10% chance to Freeze, Shock and Ignite",
+        "15% increased Effect of Non-Damaging Ailments"
       ]
     },
     "Call to the Slaughter": {
@@ -211,6 +281,11 @@
       "tradeId": "explicit.stat_3317068522",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions deal 15% increased Damage",
+        "Minions created Recently have 30% increased Movement Speed",
+        "Minions created Recently have 10% increased Attack and Cast Speed"
       ]
     },
     "Cold to the Core": {
@@ -221,6 +296,11 @@
       "tradeId": "explicit.stat_744783843",
       "bases": [
         15
+      ],
+      "stats": [
+        "1% increased Cold Damage per 25 Strength",
+        "1% increased Cold Damage per 25 Dexterity",
+        "1% increased Cold Damage per 25 Intelligence"
       ]
     },
     "Cold-Blooded Killer": {
@@ -231,6 +311,10 @@
       "tradeId": "explicit.stat_836566759",
       "bases": [
         15
+      ],
+      "stats": [
+        "+5% to Cold Damage over Time Multiplier",
+        "Recover 2% of Life on Killing a Chilled Enemy"
       ]
     },
     "Combat Rhythm": {
@@ -241,6 +325,10 @@
       "tradeId": "explicit.stat_3122505794",
       "bases": [
         7
+      ],
+      "stats": [
+        "10% increased Attack Speed if you've Hit with your Main Hand Weapon Recently",
+        "10% increased Movement Speed if you've Hit with your Off Hand Weapon Recently"
       ]
     },
     "Conjured Wall": {
@@ -251,6 +339,10 @@
       "tradeId": "explicit.stat_4105031548",
       "bases": [
         10
+      ],
+      "stats": [
+        "25% increased Spell Damage",
+        "+6% Chance to Block Spell Damage if you've Cast a Spell Recently"
       ]
     },
     "Corrosive Elements": {
@@ -264,6 +356,12 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "Fire Skills have a 25% chance to apply Fire Exposure on Hit",
+        "Cold Skills have a 25% chance to apply Cold Exposure on Hit",
+        "Lightning Skills have a 25% chance to apply Lightning Exposure on Hit",
+        "15% increased Elemental Damage"
       ]
     },
     "Cremator": {
@@ -274,6 +372,10 @@
       "tradeId": "explicit.stat_1153801980",
       "bases": [
         13
+      ],
+      "stats": [
+        "30% increased Fire Damage",
+        "Ignited Enemies Killed by your Hits are destroyed"
       ]
     },
     "Dark Ideation": {
@@ -284,6 +386,9 @@
       "tradeId": "explicit.stat_1603621602",
       "bases": [
         16
+      ],
+      "stats": [
+        "2% increased Chaos Damage per 100 maximum Mana, up to a maximum of 80%"
       ]
     },
     "Deadly Repartee": {
@@ -294,6 +399,11 @@
       "tradeId": "explicit.stat_1013470938",
       "bases": [
         7
+      ],
+      "stats": [
+        "Attack Skills deal 25% increased Damage while Dual Wielding",
+        "+5% Chance to Block Attack Damage while Dual Wielding",
+        "30% increased Attack Critical Strike Chance while Dual Wielding"
       ]
     },
     "Deep Chill": {
@@ -304,6 +414,10 @@
       "tradeId": "explicit.stat_1703766309",
       "bases": [
         15
+      ],
+      "stats": [
+        "+5% to Cold Damage over Time Multiplier",
+        "30% increased Effect of Cold Ailments"
       ]
     },
     "Devastator": {
@@ -322,6 +436,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "20% increased Attack Damage",
+        "20% increased Damage with Ailments from Attack Skills",
+        "Enemies Killed with Attack Hits have a 15% chance to Explode, dealing a tenth of their Life as Physical Damage"
       ]
     },
     "Disease Vector": {
@@ -332,6 +451,10 @@
       "tradeId": "explicit.stat_183591019",
       "bases": [
         3
+      ],
+      "stats": [
+        "+6% to Damage over Time Multiplier for Poison while wielding a Claw or Dagger",
+        "Enemies Poisoned by you cannot Regenerate Life"
       ]
     },
     "Disorienting Display": {
@@ -345,6 +468,10 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "25% increased Elemental Damage",
+        "10% chance to Blind nearby Enemies when you use an Elemental Skill"
       ]
     },
     "Doryani's Lesson": {
@@ -358,6 +485,10 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "25% increased Elemental Damage",
+        "0.2% of Elemental Damage Leeched as Life"
       ]
     },
     "Drive the Destruction": {
@@ -376,6 +507,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "0.8% of Attack Damage Leeched as Life",
+        "25% increased Attack Damage when on Full Life",
+        "Attacks have 10% chance to Maim on Hit"
       ]
     },
     "Essence Rush": {
@@ -386,6 +522,11 @@
       "tradeId": "explicit.stat_1096136223",
       "bases": [
         10
+      ],
+      "stats": [
+        "0.3% of Spell Damage Leeched as Energy Shield",
+        "5% increased Attack and Cast Speed while Leeching Energy Shield",
+        "40% increased Damage while Leeching Energy Shield"
       ]
     },
     "Expansive Might": {
@@ -396,6 +537,10 @@
       "tradeId": "explicit.stat_394918362",
       "bases": [
         2
+      ],
+      "stats": [
+        "Mace, Sceptre or Staff Attacks deal 20% increased Damage with Hits and Ailments",
+        "10% increased Area of Effect per second you've been stationary, up to a maximum of 50%"
       ]
     },
     "Exploit Weakness": {
@@ -406,6 +551,10 @@
       "tradeId": "explicit.stat_50129423",
       "bases": [
         12
+      ],
+      "stats": [
+        "40% increased Vulnerability Curse Effect",
+        "15% increased Physical Damage"
       ]
     },
     "Explosive Force": {
@@ -416,6 +565,10 @@
       "tradeId": "explicit.stat_2017927451",
       "bases": [
         5
+      ],
+      "stats": [
+        "Gain 10% of Wand Physical Damage as Extra Chaos Damage",
+        "Enemies Killed with Wand Hits have a 10% chance to Explode, dealing a quarter of their Life as Chaos Damage"
       ]
     },
     "Fan of Blades": {
@@ -426,6 +579,10 @@
       "tradeId": "explicit.stat_2484082827",
       "bases": [
         3
+      ],
+      "stats": [
+        "Attack Skills fire an additional Projectile while wielding a Claw or Dagger",
+        "20% increased Projectile Attack Damage with Claws or Daggers"
       ]
     },
     "Fearsome Warrior": {
@@ -436,6 +593,11 @@
       "tradeId": "explicit.stat_3134222965",
       "bases": [
         6
+      ],
+      "stats": [
+        "Attacks with Two Handed Melee Weapons deal 25% increased Damage with Hits and Ailments",
+        "8% increased Area of Effect",
+        "25% chance to Intimidate nearby Enemies for 4 seconds on Melee Kill"
       ]
     },
     "Feasting Fiends": {
@@ -446,6 +608,11 @@
       "tradeId": "explicit.stat_383245807",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions have 10% increased maximum Life",
+        "Minions deal 10% increased Damage",
+        "Minions Leech 0.4% of Damage as Life"
       ]
     },
     "Feed the Fury": {
@@ -464,6 +631,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "0.4% of Attack Damage Leeched as Life",
+        "30% increased Damage while Leeching",
+        "15% increased Attack Speed while Leeching"
       ]
     },
     "Force Multiplier": {
@@ -474,6 +646,10 @@
       "tradeId": "explicit.stat_1904581068",
       "bases": [
         12
+      ],
+      "stats": [
+        "25% increased Physical Damage",
+        "5% chance to deal Double Damage"
       ]
     },
     "Fuel the Fight": {
@@ -492,6 +668,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "8% increased Attack Speed",
+        "0.4% of Attack Damage Leeched as Mana",
+        "20% increased Damage while Leeching"
       ]
     },
     "Furious Assault": {
@@ -502,6 +683,10 @@
       "tradeId": "explicit.stat_3415827027",
       "bases": [
         12
+      ],
+      "stats": [
+        "25% increased Physical Damage",
+        "8% increased Attack and Cast Speed"
       ]
     },
     "Gladiator's Fortitude": {
@@ -512,6 +697,10 @@
       "tradeId": "explicit.stat_1591995797",
       "bases": [
         8
+      ],
+      "stats": [
+        "Attack Skills deal 25% increased Damage while holding a Shield",
+        "5% increased maximum Life"
       ]
     },
     "Graceful Execution": {
@@ -522,6 +711,12 @@
       "tradeId": "explicit.stat_1903496649",
       "bases": [
         6
+      ],
+      "stats": [
+        "+15 to Dexterity and Intelligence",
+        "5% increased Attack Speed with Two Handed Melee Weapons",
+        "15% increased Accuracy Rating with Two Handed Melee Weapons",
+        "25% increased Critical Strike Chance with Two Handed Melee Weapons"
       ]
     },
     "Grim Oath": {
@@ -533,6 +728,9 @@
       "bases": [
         12,
         16
+      ],
+      "stats": [
+        "Gain 10% of Physical Damage as Extra Chaos Damage"
       ]
     },
     "Heavy Hitter": {
@@ -551,6 +749,12 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "30% increased Attack Damage",
+        "30% increased Damage with Ailments from Attack Skills",
+        "10% reduced Enemy Stun Threshold",
+        "20% chance to double Stun Duration"
       ]
     },
     "Hit and Run": {
@@ -561,6 +765,10 @@
       "tradeId": "explicit.stat_2665170385",
       "bases": [
         7
+      ],
+      "stats": [
+        "Attack Skills deal 25% increased Damage while Dual Wielding",
+        "+6% chance to Suppress Spell Damage if you've Hit an Enemy Recently"
       ]
     },
     "Insatiable Killer": {
@@ -571,6 +779,11 @@
       "tradeId": "explicit.stat_3904970959",
       "bases": [
         7
+      ],
+      "stats": [
+        "Attack Skills deal 20% increased Damage while Dual Wielding",
+        "5% increased Attack Speed while Dual Wielding",
+        "5% chance to gain a Frenzy Charge on Kill while Dual Wielding"
       ]
     },
     "Inspired Oppression": {
@@ -583,6 +796,12 @@
         11,
         14,
         15
+      ],
+      "stats": [
+        "10% increased Effect of Non-Damaging Ailments",
+        "20% increased Elemental Damage",
+        "30% increased Mana Regeneration Rate if you have Frozen an Enemy Recently",
+        "30% increased Mana Regeneration Rate if you have Shocked an Enemy Recently"
       ]
     },
     "Iron Breaker": {
@@ -593,6 +812,10 @@
       "tradeId": "explicit.stat_3258653591",
       "bases": [
         12
+      ],
+      "stats": [
+        "Overwhelm 10% Physical Damage Reduction",
+        "35% increased Physical Damage"
       ]
     },
     "Lord of Drought": {
@@ -603,6 +826,10 @@
       "tradeId": "explicit.stat_2055715585",
       "bases": [
         13
+      ],
+      "stats": [
+        "40% increased Flammability Curse Effect",
+        "10% increased Area of Effect"
       ]
     },
     "Mage Bane": {
@@ -613,6 +840,11 @@
       "tradeId": "explicit.stat_684155617",
       "bases": [
         7
+      ],
+      "stats": [
+        "Attack Skills deal 20% increased Damage while Dual Wielding",
+        "20% chance to gain a Power Charge when you Block",
+        "+5% Chance to Block Spell Damage while Dual Wielding"
       ]
     },
     "Mage Hunter": {
@@ -623,6 +855,11 @@
       "tradeId": "explicit.stat_2118664144",
       "bases": [
         10
+      ],
+      "stats": [
+        "20% increased Spell Damage",
+        "4% Chance to Block Spell Damage",
+        "20% chance to gain a Power Charge when you Block"
       ]
     },
     "Martial Mastery": {
@@ -633,6 +870,11 @@
       "tradeId": "explicit.stat_1015189426",
       "bases": [
         6
+      ],
+      "stats": [
+        "+20 to Strength",
+        "10% increased Attack Speed with Two Handed Melee Weapons",
+        "10% increased Attack Speed if you have at least 600 Strength"
       ]
     },
     "Martial Momentum": {
@@ -643,6 +885,11 @@
       "tradeId": "explicit.stat_2978494217",
       "bases": [
         7
+      ],
+      "stats": [
+        "8% increased Attack Speed while Dual Wielding",
+        "16% increased Accuracy Rating while Dual Wielding",
+        "32% increased Damage if you've used a Travel Skill Recently"
       ]
     },
     "Martial Prowess": {
@@ -661,6 +908,12 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "20% increased Attack Damage",
+        "6% increased Attack Speed",
+        "15% increased Global Accuracy Rating",
+        "20% increased Damage with Ailments from Attack Skills"
       ]
     },
     "Master of Fire": {
@@ -671,6 +924,9 @@
       "tradeId": "explicit.stat_1462135249",
       "bases": [
         13
+      ],
+      "stats": [
+        "Nearby Enemies have Fire Exposure"
       ]
     },
     "Master the Fundamentals": {
@@ -681,6 +937,11 @@
       "tradeId": "explicit.stat_3585232432",
       "bases": [
         12
+      ],
+      "stats": [
+        "35% increased Physical Damage",
+        "35% reduced Elemental Damage",
+        "+10% to all Elemental Resistances"
       ]
     },
     "Misery Everlasting": {
@@ -691,6 +952,10 @@
       "tradeId": "explicit.stat_3832665876",
       "bases": [
         16
+      ],
+      "stats": [
+        "40% increased Despair Curse Effect",
+        "10% increased Skill Effect Duration"
       ]
     },
     "Opportunistic Fusilade": {
@@ -701,6 +966,10 @@
       "tradeId": "explicit.stat_4281625943",
       "bases": [
         5
+      ],
+      "stats": [
+        "35% increased Damage with Wands if you've dealt a Critical Strike Recently",
+        "50% increased Critical Strike Chance with Wands"
       ]
     },
     "Overlord": {
@@ -711,6 +980,10 @@
       "tradeId": "explicit.stat_2250169390",
       "bases": [
         2
+      ],
+      "stats": [
+        "Melee Hits with Maces, Sceptres or Staves Fortify for 6 seconds",
+        "30% increased Damage with Maces, Sceptres or Staves"
       ]
     },
     "Overshock": {
@@ -721,6 +994,10 @@
       "tradeId": "explicit.stat_3777170562",
       "bases": [
         14
+      ],
+      "stats": [
+        "30% increased Lightning Damage",
+        "40% increased Effect of Lightning Ailments"
       ]
     },
     "Overwhelming Malice": {
@@ -731,6 +1008,9 @@
       "tradeId": "explicit.stat_770408103",
       "bases": [
         16
+      ],
+      "stats": [
+        "10% chance to gain Unholy Might for 4 seconds on Critical Strike"
       ]
     },
     "Paralysis": {
@@ -741,6 +1021,11 @@
       "tradeId": "explicit.stat_4272503233",
       "bases": [
         14
+      ],
+      "stats": [
+        "30% increased Lightning Damage",
+        "Lightning Skills have 10% reduced Enemy Stun Threshold",
+        "10% chance to double Stun Duration"
       ]
     },
     "Practiced Caster": {
@@ -751,6 +1036,11 @@
       "tradeId": "explicit.stat_3435403756",
       "bases": [
         10
+      ],
+      "stats": [
+        "20% increased Spell Damage",
+        "5% increased Cast Speed",
+        "35% chance to Ignore Stuns while Casting"
       ]
     },
     "Precise Retaliation": {
@@ -761,6 +1051,10 @@
       "tradeId": "explicit.stat_2335364359",
       "bases": [
         8
+      ],
+      "stats": [
+        "+30% to Critical Strike Multiplier if you have Blocked Recently",
+        "60% increased Critical Strike Chance if you haven't Blocked Recently"
       ]
     },
     "Primordial Bond": {
@@ -771,6 +1065,11 @@
       "tradeId": "explicit.stat_622362787",
       "bases": [
         17
+      ],
+      "stats": [
+        "10% increased Damage per Summoned Golem",
+        "40% increased Effect of Buffs granted by your Golems",
+        "Golems have 25% increased Maximum Life"
       ]
     },
     "Prismatic Heart": {
@@ -784,6 +1083,10 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "30% increased Elemental Damage",
+        "+10% to all Elemental Resistances"
       ]
     },
     "Prodigious Defence": {
@@ -794,6 +1097,11 @@
       "tradeId": "explicit.stat_1705633890",
       "bases": [
         8
+      ],
+      "stats": [
+        "+3% Chance to Block Attack Damage",
+        "3% Chance to Block Spell Damage",
+        "30% increased Attack Damage while holding a Shield"
       ]
     },
     "Quick and Deadly": {
@@ -804,6 +1112,10 @@
       "tradeId": "explicit.stat_2169345147",
       "bases": [
         7
+      ],
+      "stats": [
+        "60% increased Main Hand Attack Damage while wielding two different Weapon Types",
+        "30% increased Off Hand Attack Speed while wielding two different Weapon Types"
       ]
     },
     "Raze and Pillage": {
@@ -814,6 +1126,11 @@
       "tradeId": "explicit.stat_1038897629",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions gain 6% of Physical Damage as Extra Fire Damage",
+        "Minions have 20% chance to Ignite",
+        "Minions deal 20% increased Damage with Hits and Ailments against Ignited Enemies"
       ]
     },
     "Renewal": {
@@ -824,6 +1141,10 @@
       "tradeId": "explicit.stat_3607300552",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions have 5% chance to deal Double Damage while they are on Full Life",
+        "Minions Regenerate 1% of Life per second"
       ]
     },
     "Righteous Path": {
@@ -837,6 +1158,10 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "Zealotry has 50% increased Mana Reservation Efficiency",
+        "10% increased Effect of Consecrated Ground you create"
       ]
     },
     "Riot Queller": {
@@ -847,6 +1172,10 @@
       "tradeId": "explicit.stat_254194892",
       "bases": [
         8
+      ],
+      "stats": [
+        "+4% Chance to Block Attack Damage",
+        "Enemies Taunted by you take 6% increased Damage"
       ]
     },
     "Rotten Claws": {
@@ -857,6 +1186,9 @@
       "tradeId": "explicit.stat_2289610642",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions have a 12% chance to Impale on Hit with Attacks"
       ]
     },
     "Run Through": {
@@ -867,6 +1199,12 @@
       "tradeId": "explicit.stat_1488030420",
       "bases": [
         1
+      ],
+      "stats": [
+        "15% increased Physical Damage with Axes or Swords",
+        "10% chance to Impale Enemies on Hit with Axes or Swords",
+        "10% increased Impale Effect",
+        "Axe or Sword Attacks deal 15% increased Damage with Ailments"
       ]
     },
     "Sadist": {
@@ -880,6 +1218,11 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "15% increased Elemental Damage if you've Chilled an Enemy Recently",
+        "25% increased Elemental Damage if you've Shocked an Enemy Recently",
+        "20% increased Elemental Damage if you've Ignited an Enemy Recently"
       ]
     },
     "Sap Psyche": {
@@ -890,6 +1233,11 @@
       "tradeId": "explicit.stat_715786975",
       "bases": [
         10
+      ],
+      "stats": [
+        "20% increased Spell Damage",
+        "30% increased Mana Regeneration Rate",
+        "Regenerate 1% of Energy Shield per second if you've Cursed an Enemy Recently"
       ]
     },
     "Scintillating Idea": {
@@ -900,6 +1248,10 @@
       "tradeId": "explicit.stat_2589589781",
       "bases": [
         14
+      ],
+      "stats": [
+        "20% increased maximum Mana",
+        "Damage Penetrates 5% Lightning Resistance"
       ]
     },
     "Seal Mender": {
@@ -910,6 +1262,9 @@
       "tradeId": "explicit.stat_876846990",
       "bases": [
         10
+      ],
+      "stats": [
+        "Skills Supported by Unleash have 30% increased Seal gain frequency"
       ]
     },
     "Skeletal Atrophy": {
@@ -920,6 +1275,10 @@
       "tradeId": "explicit.stat_1290215329",
       "bases": [
         17
+      ],
+      "stats": [
+        "Summoned Skeletons have 30% of Physical Damage Converted to Chaos Damage",
+        "Summoned Skeletons have 10% chance to Wither Enemies for 2 seconds on Hit"
       ]
     },
     "Smite the Weak": {
@@ -938,6 +1297,10 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "Attacks have 10% chance to Maim on Hit",
+        "40% increased Attack Damage against Maimed Enemies"
       ]
     },
     "Smoking Remains": {
@@ -948,6 +1311,10 @@
       "tradeId": "explicit.stat_2322980282",
       "bases": [
         13
+      ],
+      "stats": [
+        "35% increased Fire Damage",
+        "10% chance to create a Smoke Cloud on Kill"
       ]
     },
     "Snowstorm": {
@@ -959,6 +1326,9 @@
       "bases": [
         14,
         15
+      ],
+      "stats": [
+        "Gain 8% of Lightning Damage as Extra Cold Damage against Chilled Enemies"
       ]
     },
     "Storm Drinker": {
@@ -969,6 +1339,10 @@
       "tradeId": "explicit.stat_2087561637",
       "bases": [
         14
+      ],
+      "stats": [
+        "Damage Penetrates 8% Lightning Resistance",
+        "0.5% of Lightning Damage Leeched as Energy Shield"
       ]
     },
     "Storm's Hand": {
@@ -979,6 +1353,10 @@
       "tradeId": "explicit.stat_1122051203",
       "bases": [
         5
+      ],
+      "stats": [
+        "Gain 10% of Wand Physical Damage as Extra Lightning Damage",
+        "25% of Wand Physical Damage converted to Lightning Damage"
       ]
     },
     "Stormrider": {
@@ -990,6 +1368,11 @@
       "bases": [
         14,
         15
+      ],
+      "stats": [
+        "10% chance to gain a Power Charge when you Shock a Chilled Enemy",
+        "25% increased Cold Damage with Hits against Shocked Enemies",
+        "25% increased Lightning Damage with Hits against Chilled Enemies"
       ]
     },
     "Strike Leader": {
@@ -1000,6 +1383,11 @@
       "tradeId": "explicit.stat_282062371",
       "bases": [
         8
+      ],
+      "stats": [
+        "+2% Chance to Block Attack Damage",
+        "Attack Skills deal 30% increased Damage while holding a Shield",
+        "+0.2 metres to Melee Strike Range while Holding a Shield"
       ]
     },
     "Surefooted Striker": {
@@ -1010,6 +1398,10 @@
       "tradeId": "explicit.stat_3410752193",
       "bases": [
         6
+      ],
+      "stats": [
+        "5% chance to deal Double Damage if you've dealt a Critical Strike with a Two Handed Melee Weapon Recently",
+        "40% increased Critical Strike Chance with Two Handed Melee Weapons"
       ]
     },
     "Tempered Arrowheads": {
@@ -1020,6 +1412,11 @@
       "tradeId": "explicit.stat_2631806437",
       "bases": [
         4
+      ],
+      "stats": [
+        "Bow Skills have +6% to Damage over Time Multiplier",
+        "Bow Skills have 10% increased Skill Effect Duration",
+        "10% increased Duration of Ailments inflicted while wielding a Bow"
       ]
     },
     "Tempt the Storm": {
@@ -1030,6 +1427,10 @@
       "tradeId": "explicit.stat_348883745",
       "bases": [
         14
+      ],
+      "stats": [
+        "40% increased Conductivity Curse Effect",
+        "20% increased Mana Regeneration Rate"
       ]
     },
     "Thaumophage": {
@@ -1040,6 +1441,11 @@
       "tradeId": "explicit.stat_177215332",
       "bases": [
         10
+      ],
+      "stats": [
+        "0.6% of Spell Damage Leeched as Energy Shield",
+        "25% increased Spell Damage while on Full Energy Shield",
+        "10% chance to Hinder Enemies on Hit with Spells"
       ]
     },
     "Thunderstruck": {
@@ -1050,6 +1456,11 @@
       "tradeId": "explicit.stat_1741700339",
       "bases": [
         14
+      ],
+      "stats": [
+        "20% increased Lightning Damage",
+        "30% increased Critical Strike Chance",
+        "Your Critical Strikes Knock Back Shocked Enemies"
       ]
     },
     "Titanic Swings": {
@@ -1060,6 +1471,10 @@
       "tradeId": "explicit.stat_2930275641",
       "bases": [
         6
+      ],
+      "stats": [
+        "15% increased Area of Effect while wielding a Two Handed Melee Weapon",
+        "20% increased Area Damage while wielding a Two Handed Melee Weapon"
       ]
     },
     "Touch of Cruelty": {
@@ -1070,6 +1485,10 @@
       "tradeId": "explicit.stat_2780712583",
       "bases": [
         16
+      ],
+      "stats": [
+        "Chaos Spells have 10% chance to Hinder Enemies on Hit",
+        "Enemies Hindered by you take 10% increased Chaos Damage"
       ]
     },
     "Unholy Grace": {
@@ -1080,6 +1499,10 @@
       "tradeId": "explicit.stat_4186213466",
       "bases": [
         16
+      ],
+      "stats": [
+        "30% increased Chaos Damage",
+        "10% increased Attack and Cast Speed"
       ]
     },
     "Unspeakable Gifts": {
@@ -1090,6 +1513,9 @@
       "tradeId": "explicit.stat_729163974",
       "bases": [
         16
+      ],
+      "stats": [
+        "Enemies you Kill have a 10% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage"
       ]
     },
     "Unwaveringly Evil": {
@@ -1100,6 +1526,10 @@
       "tradeId": "explicit.stat_2788982914",
       "bases": [
         16
+      ],
+      "stats": [
+        "30% increased Chaos Damage",
+        "Chaos Skills ignore interruption from Stuns"
       ]
     },
     "Veteran Defender": {
@@ -1110,6 +1540,11 @@
       "tradeId": "explicit.stat_664010431",
       "bases": [
         8
+      ],
+      "stats": [
+        "+15 to all Attributes",
+        "60% increased Defences from Equipped Shield",
+        "+15% Elemental Resistances while holding a Shield"
       ]
     },
     "Vicious Bite": {
@@ -1120,6 +1555,10 @@
       "tradeId": "explicit.stat_882876854",
       "bases": [
         17
+      ],
+      "stats": [
+        "Minions have +15% to Critical Strike Multiplier",
+        "Minions have 30% increased Critical Strike Chance"
       ]
     },
     "Vicious Skewering": {
@@ -1138,6 +1577,11 @@
         7,
         8,
         9
+      ],
+      "stats": [
+        "15% increased Effect of Impales inflicted by Hits that also inflict Bleeding",
+        "10% chance to Impale Enemies on Hit with Attacks",
+        "Attacks have 10% chance to cause Bleeding"
       ]
     },
     "Weight Advantage": {
@@ -1148,6 +1592,11 @@
       "tradeId": "explicit.stat_2244243943",
       "bases": [
         2
+      ],
+      "stats": [
+        "+20 to Strength",
+        "Mace, Sceptre or Staff Attacks deal 30% increased Damage with Hits and Ailments",
+        "4% chance to deal Double Damage while wielding a Mace, Sceptre or Staff"
       ]
     },
     "Wicked Pall": {
@@ -1158,6 +1607,10 @@
       "tradeId": "explicit.stat_1616734644",
       "bases": [
         16
+      ],
+      "stats": [
+        "30% increased Chaos Damage",
+        "5% increased Skill Effect Duration"
       ]
     },
     "Widespread Destruction": {
@@ -1171,6 +1624,10 @@
         13,
         14,
         15
+      ],
+      "stats": [
+        "20% increased Elemental Damage",
+        "6% increased Area of Effect"
       ]
     },
     "Wind-up": {
@@ -1181,6 +1638,10 @@
       "tradeId": "explicit.stat_1938661964",
       "bases": [
         3
+      ],
+      "stats": [
+        "10% chance to gain a Power Charge on Non-Critical Strike with a Claw or Dagger",
+        "+15% to Critical Strike Multiplier with Claws or Daggers"
       ]
     },
     "Wound Aggravation": {
@@ -1191,6 +1652,11 @@
       "tradeId": "explicit.stat_69078820",
       "bases": [
         1
+      ],
+      "stats": [
+        "20% increased Physical Damage with Axes or Swords",
+        "Axe or Sword Attacks deal 20% increased Damage with Ailments",
+        "+5% to Physical Damage over Time Multiplier while wielding an Axe or Sword"
       ]
     }
   }

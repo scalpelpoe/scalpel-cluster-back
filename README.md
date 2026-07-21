@@ -29,4 +29,7 @@ explanation.
 - `npm run build` - emits `dist/plugin.js` + `dist/manifest.json`
 - `npm run trim-data` - regenerate `src/data/cluster-data.json` from
   `scripts/vendor/data-full.json` (upstream dataset copy)
+- `node scripts/fetch-notable-stats.mjs` - regenerate
+  `scripts/vendor/notable-stats.json` (in-game stat lines per notable, from
+  RePoE-fork stat translations)
 - `node scripts/verify-parity.mjs` - manual parity probe against the live site

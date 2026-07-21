@@ -40,6 +40,15 @@ describe('NotableSelect', () => {
     expect(screen.getByText('Feed the Fury')).toBeTruthy()
   })
 
+  it('scopes option tooltips to bases shared with the partner', () => {
+    render(<NotableSelect label="Desired Notable 2" value={null} partner="Prodigious Defence" onChange={() => {}} />)
+    fireEvent.mouseEnter(screen.getByText('Feed the Fury'))
+    // Feed the Fury rolls on bases 1-9, but with Prodigious Defence (base 8
+    // only) the tooltip must list just the shared base.
+    expect(screen.getByText('Shield - Attack Damage')).toBeTruthy()
+    expect(screen.queryByText('Axe/Sword - Hits & Ailments')).toBeNull()
+  })
+
   it('renders the pick as a chip in the bar frame and keeps the swap list below', () => {
     const onChange = vi.fn()
     render(<NotableSelect label="Desired Notable 1" value="Prodigious Defence" partner={null} onChange={onChange} />)

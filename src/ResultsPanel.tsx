@@ -42,7 +42,11 @@ export function ResultsPanel({ pair, choice, onChoiceChange, getLeague, onOpenTr
           <ul style={{ listStyle: 'none', margin: '4px 0 0', padding: 0, height: 72, overflowY: 'auto' }}>
             {shownMiddles.map((m) => (
               <li key={m.name} style={{ height: 24, display: 'flex', alignItems: 'center' }}>
-                <NotableLabel name={m.name} detail={`(ilvl ${m.ilvl})`} />
+                <NotableLabel
+                  name={m.name}
+                  detail={`(ilvl ${m.ilvl})`}
+                  tooltipBases={m.bases.filter((b) => pair.sharedBases.includes(b))}
+                />
               </li>
             ))}
           </ul>
