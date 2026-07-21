@@ -1,0 +1,5 @@
+# Generated JSON that trim-data --check compares byte-for-byte must stay LF
+# in the working tree; core.autocrlf=true would otherwise materialize CRLF on
+# checkout and break the parity check (and the vitest suite) on Windows.
+src/data/*.json text eol=lf
+scripts/vendor/*.json text eol=lf
