@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "cluster-back",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "Cluster Back",
   "description": "Large Cluster Jewel finder for PoE1. Pick some desired notables, then find and search trade for options that put a trash notable in back.",
   "author": "scalpelpoe",
